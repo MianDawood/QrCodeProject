@@ -1,137 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <!-- favicon------------------------------------------------------------ -->
 
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="fav_icon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="fav_icon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="fav_icon/favicon-96x96.png"
-    />
-    <link rel="manifest" href="fav-icon/favicon-96x96.png" />
-    <link rel="mask-icon" href="fav_icon/favicon-96x96.png" color="#5bbad5" />
-    <!-- favicon------------------------------------------------------------ -->
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+<head>
+  <!-- favicon------------------------------------------------------------ -->
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="apple-touch-icon" sizes="76x76" href="fav_icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="fav_icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="fav_icon/favicon-96x96.png">
+  <link rel="manifest" href="fav-icon/favicon-96x96.png">
+  <link rel="mask-icon" href="fav_icon/favicon-96x96.png" color="#5bbad5">
+  <!-- favicon------------------------------------------------------------ -->
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Create QR codes</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand font-weight-bold" href="index.html">
-            <img src="images/logoo.png" alt="logo" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            ria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Language
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Urdu</a>
-                  <a class="dropdown-item" href="#">English</a>
-              
-                </div>
-              </li>
-  
-              <li class="nav-item">
-                <a class="nav-link active" href="#">GR Code Generator</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Prices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact us</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                  data-whatever="@mdo"
-                  href="#"
-                  >Login</a
-                >
-              </li>
-            </ul>
-            <button
-              class="btn btn-dark Register_btn"
-              data-toggle="modal"
-              data-target="#creataccount"
-              data-whatever="@mdo"
-            >
-              Register
-            </button>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+     -->
+  <!-- Latest compiled JavaScript -->
+  <link rel="stylesheet" href="gilroy-bold-cufonfonts-webfont/Gilroy-Medium.woff">
+  <link rel="stylesheet" href="gilroy-bold-cufonfonts-webfont/Gilroy-Regular.woff">
+  <link rel="stylesheet" href="gilroy-bold-cufonfonts-webfont/Gilroy-Bold.woff">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+
+  <title>Create QR codes</title>
+</head>
+<script type="text/javascript">
+  function toggleNav() {
+    document.getElementById("main-nav").classList.toggle('show');
+  }
+
+</script>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-nav">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="index.html">
+        <img src="images/main-logo.svg" class="img-fluid" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar--right">
+          <div class="hamburger" id="hamburger" onclick="toggleNav();">
+            <div class="icon1"></div>
+            <div class="icon2"></div>
+            <div class="icon3"></div>
           </div>
         </div>
-      </nav>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="show-sub-div d-flex align-items-center">
+          <div class="logo logo-toggle">
+            <a class="navbar-brand font-weight-bold" href="index.html">
+              <img src="images/main-logo-white.svg" class="img-fluid" alt="logo">
+  
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <div class="navbar--right">
+                <div class="hamburger" id="hamburger" onclick="toggleNav();">
+                  <div class="icon1 icon4"></div>
+                  <div class="icon3 icon5"></div>
+                </div>
+              </div>
+            </button>
+          </div>
+          <ul class="navbar-nav ml-auto topbar-menu">
+            <!-- <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Language
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"></a>
+                        
+                        
+                       
+                      </div>
+                    </li> -->
+  
+  
+            <li class="nav-item">
+              <a class="nav-link active" href="qrgenrator.html">QR Code Generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="price.html">Prices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link login-top" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"
+                href="#">Login</a>
+  
+  
+            </li>
+          </ul>
+          <button class="btn btn-dark Register_btn" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo">Register</button>
+        </div>
+        <button class="navbar-toggler show-sub-div-hidden d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="navbar--right">
+          <div class="hamburger" id="hamburger" onclick="toggleNav();">
+          </div>
+        </div>
+      </button>
+      </div>
+    </div>
+  </nav>
+
+      <!-- Register Model here -->
+      <div class="modal fade right" id="creataccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true" data-backdrop="true">
+      <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-danger register_modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <p class="heading">
+            Create account
+            </p>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">&times;</span>
+            </button>
+          </div>
+
+          <!--Body-->
+          <div class="modal-body">
+
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 ">
+                <div class="modal-contet">
+                  <h1>Make Your Life</h1>
+                <h3>Very Easy</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, reiciendis
+                  asperiores? Quae expedita deleniti error aperiam et veniam magni obcaecati?</p>
+                </div>
+                <div class="modal-img">
+                  <img src="images/register.png" class="img-fluid" alt="">
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="rgr-form-inside">
+                
+              
+                <form action="/action_page.php">
+                  <div class="input-container">
+                    <i class="fa fa-user Register_icon"></i>
+                    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+                  </div>
+                
+                  <div class="input-container">
+                    <i class="fa fa-envelope Register_icon"></i>
+                    <input class="input-field" type="text" placeholder="Email" name="email">
+                  </div>
+                
+                  <div class="input-container ">
+                    <i class="fa fa-key Register_icon "></i>
+                    <input class="input-field third" type="password" placeholder="Password" name="psw">
+                    <i class="fas fa-eye-slash Register_icon show"></i>
+                  </div>
+                
+                  <button type="submit" class="btn  btn-dark ">Create your account</button>
+                </form>
+              
+              <div class="contuine-with">
+                <span>Or contuine with</span>
+              </div>
+              <div class="rgestr-social-icon">
+                <img src="images/fb.png" alt="">
+                <img src="images/google.png" alt="">
+                <img src="images/window (1).png" alt="">
+
+                
+
+              </div>
+              <div class="alrdy-acc">
+                <p>
+                  Already have an account? 
+                  <a href="">login</a>
+                </p>
+              </div>
+              <div class="agree">
+                <p>
+                  By creating an account, I agree to QRcodeservice
+                  <a href="">Website terms</a>
+                  <a href="">Privacy policy</a>and 
+                  <a href="">Licensing terms.</a>
+            
+                </p>
+              </div>
+
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+      </div>
+      <!--  ===============================================e================================================-->
+      <div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                          
+                            <form class="login-form" action="/action_page.php">
+                              
+                            
+                              <div class="input-container">
+                                <i class="fa fa-envelope Register_icon"></i>
+                                <input class="input-field" type="text" placeholder="Email" name="email">
+                              </div>
+                            
+                              <div class="input-container ">
+                                <i class="fa fa-key Register_icon "></i>
+                                <input class="input-field third" type="password" placeholder="Password" name="psw">
+                                <i class="fas fa-eye-slash Register_icon show"></i>
+                              </div>
+                              <div class="forget-password">
+                                <a href="">Forget Your Password</a>
+                              </div>
+                            
+                              <button type="submit" class="btn  btn-dark ">Login</button>
+                            </form>
+                            <div class="contuine-with">
+                              <span>Or contuine with</span>
+                            </div>
+                            <div class="rgestr-social-icon">
+                              <img src="images/fb.png" alt="">
+                              <img src="images/google.png" alt="">
+                              <img src="images/window (1).png" alt="">
+                            </div>
+                      
+                            <div class="dont-have-acc">
+                              <p>
+                              <a href="">Don,t Have Account? </a>
+                              
+                              </p>
+                              <button type="submit" class="btn creat_acc  btn-dark ">Creat Your Account</button>
+                            </div>
+                          
+                          </div>
+                        
+                        </div>
+                      </div>
+      </div>
+
     <!-- PRICES -->
 
    <div class="container">
        <div class="row">
            <div class="col-12 text-center heading price-main-heading">
                <h2>
-                   PRICES
+                   Prices
                </h2>
                <p>Get more out of your QR codes and Select a plan that is perfect for you and your needs.</p>
             
@@ -188,6 +331,7 @@
                   </div>
                   <div class="col-lg-3 col-md-6 col-sm-12 prices-main Basic_price">
                     <div class="price-heading basic-div">
+                      <p class="popular">Most popular plan</p>
                         <h3>Basic
                         </h3>
                         <span><b> $9.99</b> <small>/per month</small> </span>
@@ -195,7 +339,6 @@
 
                     </div>
                     <div class="chart">
-                        <p class="popular">Most popular plan</p>
                         <p>Unlimited</p>
                         <p>50</p>
                         <p>Advanced</p>
