@@ -105,11 +105,13 @@
             <li class="nav-item">
               <a class="nav-link login-top" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"
                 href="#">Login</a>
-  
-  
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link login-top" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo"
+                href="#">Register</a>
             </li>
           </ul>
-          <button class="btn btn-dark Register_btn" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo">Register</button>
+          <button class="btn btn-dark Register_btn d-none d-lg-block" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo">Register</button>
         </div>
         <button class="navbar-toggler show-sub-div-hidden d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -214,59 +216,59 @@
     </div>
       </div>
       <!--  ===============================================e================================================-->
-      <div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                          
-                            <form class="login-form" action="/action_page.php">
-                              
-                            
-                              <div class="input-container">
-                                <i class="fa fa-envelope Register_icon"></i>
-                                <input class="input-field" type="text" placeholder="Email" name="email">
-                              </div>
-                            
-                              <div class="input-container ">
-                                <i class="fa fa-key Register_icon "></i>
-                                <input class="input-field third" type="password" placeholder="Password" name="psw">
-                                <i class="fas fa-eye-slash Register_icon show"></i>
-                              </div>
-                              <div class="forget-password">
-                                <a href="">Forget Your Password</a>
-                              </div>
-                            
-                              <button type="submit" class="btn  btn-dark ">Login</button>
-                            </form>
-                            <div class="contuine-with">
-                              <span>Or contuine with</span>
-                            </div>
-                            <div class="rgestr-social-icon">
-                              <img src="images/fb.png" alt="">
-                              <img src="images/google.png" alt="">
-                              <img src="images/window (1).png" alt="">
-                            </div>
-                      
-                            <div class="dont-have-acc">
-                              <p>
-                              <a href="">Don,t Have Account? </a>
-                              
-                              </p>
-                              <button type="submit" class="btn creat_acc  btn-dark ">Creat Your Account</button>
-                            </div>
-                          
-                          </div>
-                        
-                        </div>
-                      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="heading m-0" id="exampleModalLabel">Login</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+  
+            <form class="login-form" action="/action_page.php">
+  
+  
+              <div class="input-container">
+                <i class="fa fa-envelope Register_icon"></i>
+                <input class="input-field" type="text" placeholder="Email" name="email">
+              </div>
+  
+              <div class="input-container ">
+                <i class="fa fa-key Register_icon "></i>
+                <input class="input-field third" type="password" placeholder="Password" name="psw">
+                <i class="fas fa-eye-slash Register_icon show"></i>
+              </div>
+              <div class="forget-password">
+                <a href="">Forget Your Password</a>
+              </div>
+  
+              <button type="submit" class="btn  btn-dark ">Login</button>
+            </form>
+            <div class="contuine-with">
+              <span>Or contuine with</span>
+            </div>
+            <div class="rgestr-social-icon">
+              <img src="images/fb.png" alt="">
+              <img src="images/google.png" alt="">
+              <img src="images/window (1).png" alt="">
+            </div>
+  
+            <div class="dont-have-acc">
+              <p>
+                <a href="">Don,t Have Account? </a>
+  
+              </p>
+              <button type="submit" class="btn creat_acc  btn-dark ">Create Your Account</button>
+            </div>
+  
+          </div>
+  
+        </div>
       </div>
+    </div>
 
     <!-- PRICES -->
 
@@ -285,7 +287,7 @@
     <div class="container">
         <div class="pricess">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12 prices-main">
+                <div class="col-lg-3 col-md-3 col-sm-3 prices-main">
                   <div class="price-heading price-heading1">
                       <h3>Billed</h3>
                     
@@ -312,7 +314,7 @@
                       <p>High quality codes</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 prices-main">
+                <div class="col-lg-3 col-md-3 col-sm-3 prices-main">
                     <div class="price-heading">
                         <h3>Free</h3>
                         <span><b> $0</b> <small>/Month</small> </span>
@@ -329,7 +331,7 @@
 
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-12 prices-main Basic_price">
+                  <div class="col-lg-3 col-md-3 col-sm-3 prices-main Basic_price">
                     <div class="price-heading basic-div">
                       <p class="popular">Most popular plan</p>
                         <h3>Basic
@@ -347,7 +349,7 @@
                         <button class="btn btn-dark" type="button">Choose Plan</button>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-6 col-sm-12 prices-main">
+                  <div class="col-lg-3 col-md-3 col-sm-3 prices-main">
                     <div class="price-heading">
                         <h3>Pro</h3>
                         

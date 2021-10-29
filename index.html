@@ -105,11 +105,13 @@
             <li class="nav-item">
               <a class="nav-link login-top" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"
                 href="#">Login</a>
-  
-  
+            </li>
+            <li class="nav-item d-lg-none">
+              <a class="nav-link login-top" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo"
+                href="#">Register</a>
             </li>
           </ul>
-          <button class="btn btn-dark Register_btn" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo">Register</button>
+          <button class="btn btn-dark Register_btn d-none d-lg-block" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo">Register</button>
         </div>
         <button class="navbar-toggler show-sub-div-hidden d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -133,8 +135,8 @@
 
         <div class="col-lg-6 col-md-6 col-sm-12 banner">
 
-          <h3>Boost your Business with Easy to Create QR Codes</h3>
-          <p>
+          <h3 class="text-left">Boost your Business with Easy to Create QR Codes</h3>
+          <p class="text-left">
             Do-It-Yourself QR Codes to Promote Your Business
           </p>
           <button class="btn btn-dark" type="button">Create your QR Code<i class="fas fa-arrow-right"></i></button>
@@ -748,33 +750,35 @@
 
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 services">
-          <div class="footer_collapse hidden visible-md d-lg-none d-md-block" type="button" data-toggle="collapse"
-            data-target="#slide6" aria-expanded="false" aria-controls="slide6">
-            <h3 class="footer_text">
+            <div class="footer_collapse hidden visible-md d-lg-none d-md-block" type="button" data-toggle="collapse"
+              data-target="#slide6" aria-expanded="false" aria-controls="slide6">
+              <h3 class="footer_text">
+                Services
+              </h3>
+              <div class="footer-iconx">
+                <div class="plus">
+                  <span><i class="fas fa-plus"></i></span>
+                </div>
+                <div class="mainas">
+                  <span><i class="fas fa-minus"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="d-none d-lg-block footer_heading">
               Services
             </h3>
-            <div class="footer-iconx">
-              <div class="plus">
-                <span><i class="fas fa-plus"></i></span>
-              </div>
-              <div class="mainas">
-                <span><i class="fas fa-minus"></i></span>
+
+            <div class="collapse footer-collap collapse-xl" id="slide6">
+              <div class="well">
+                <ul>
+                  <li><a href="">CreatQRcode</a></li>
+                </ul>
               </div>
             </div>
-          </div>
-
-          <h3 class="d-none d-lg-block footer_heading">
-            Services
-          </h3>
-
-          <div class="collapse footer-collap collapse-xl" id="slide6">
-            <div class="well">
-              <ul>
-                <li><a href="">CreatQRcode</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
+
+
         <div class="col-lg-3 col-md-3 col-sm-12 prices">
           <div class="footer_collapse hidden visible-md d-lg-none d-md-block" type="button" data-toggle="collapse"
             data-target="#slide7" aria-expanded="false" aria-controls="slide7">
@@ -806,6 +810,8 @@
             </div>
           </div>
         </div>
+
+
         <div class="col-lg-3 col-md-3 col-sm-12 help">
           <div class="footer_collapse hidden visible-md d-lg-none d-md-block" type="button" data-toggle="collapse"
             data-target="#slide8" aria-expanded="false" aria-controls="slide8">
@@ -840,13 +846,15 @@
             </div>
           </div>
         </div>
+
+
       </div>
 
       <div class="row">
         <div class="col-12 p-0">
           <div class="copy-right-foter">
             <div class="copy-right">
-              <p>2021 © QRCODESSERVICES - ‘QR Code’ is a trademark of DENSO WAVE INCORPORATED</p>
+              <p>2021 © QrCodeServices - ‘QR Code’ is a trademark of DENSO WAVE INCORPORATED</p>
             </div>
             <div class="foter-btn">
               <ul class="navbar-nav">
@@ -974,7 +982,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <p class="heading m-0" id="exampleModalLabel">Login</p>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -1014,7 +1022,7 @@
               <a href="">Don,t Have Account? </a>
 
             </p>
-            <button type="submit" class="btn creat_acc  btn-dark ">Creat Your Account</button>
+            <button type="submit" class="btn creat_acc  btn-dark ">Create Your Account</button>
           </div>
 
         </div>
