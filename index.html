@@ -3,7 +3,6 @@
 
 <head>
   <!-- favicon------------------------------------------------------------ -->
-
   <link rel="apple-touch-icon" sizes="76x76" href="fav_icon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="32x32" href="fav_icon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="fav_icon/favicon-96x96.png">
@@ -14,16 +13,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
   <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <!-- Popper JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Popper JS -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-     -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> -->
   <!-- Latest compiled JavaScript -->
   <link rel="stylesheet" href="gilroy-bold-cufonfonts-webfont/Gilroy-Medium.woff">
   <link rel="stylesheet" href="gilroy-bold-cufonfonts-webfont/Gilroy-Regular.woff">
@@ -32,24 +25,17 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
-
   <title>Create QR codes</title>
 </head>
-<script type="text/javascript">
-  function toggleNav() {
-    document.getElementById("main-nav").classList.toggle('show');
-  }
-
-</script>
+<script
+  type="text/javascript"> function toggleNav() { document.getElementById("main-nav").classList.toggle('show'); }</script>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-nav">
-    <div class="container">
-      <a class="navbar-brand font-weight-bold" href="index.html">
-        <img src="images/main-logo.svg" class="img-fluid" alt="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container"> <a class="navbar-brand font-weight-bold" href="index.html"> <img src="images/main-logo.svg"
+          class="img-fluid" alt="logo"> </a> <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" ria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
         <div class="navbar--right">
           <div class="hamburger" id="hamburger" onclick="toggleNav();">
             <div class="icon1"></div>
@@ -60,12 +46,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="show-sub-div d-flex align-items-center">
-          <div class="logo logo-toggle">
-            <a class="navbar-brand font-weight-bold" href="index.html">
-              <img src="images/main-logo-white.svg" class="img-fluid" alt="logo">
-  
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          <div class="logo logo-toggle"> <a class="navbar-brand font-weight-bold" href="index.html"> <img
+                src="images/main-logo-white.svg" class="img-fluid" alt="logo"> </a> <button class="navbar-toggler"
+              type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <div class="navbar--right">
                 <div class="hamburger" id="hamburger" onclick="toggleNav();">
@@ -73,109 +56,61 @@
                   <div class="icon3 icon5"></div>
                 </div>
               </div>
-            </button>
-          </div>
+            </button> </div>
           <ul class="navbar-nav ml-auto topbar-menu">
-            <!-- <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
-                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         Language
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#"></a>
-                        
-                        
-                       
-                      </div>
-                    </li> -->
-  
-  
-            <li class="nav-item">
-              <a class="nav-link active" href="qrgenrator.html">QR Code Generator</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="price.html">Prices</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link login-top" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"
-                href="#">Login</a>
-            </li>
-            <li class="nav-item d-lg-none">
-              <a class="nav-link login-top" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo"
-                href="#">Register</a>
-            </li>
-          </ul>
-          <button class="btn btn-dark Register_btn d-none d-lg-block" data-toggle="modal" data-target="#creataccount"data-whatever="@mdo">Register</button>
-        </div>
-        <button class="navbar-toggler show-sub-div-hidden d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="navbar--right">
-          <div class="hamburger" id="hamburger" onclick="toggleNav();">
+            <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Language </a> <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#"></a> </div> </li> -->
+            <li class="nav-item"> <a class="nav-link active" href="qrgenrator.html">QR Code Generator</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="price.html">Prices</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="faq.html">FAQ</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="contact.html">Contact us</a> </li>
+            <li class="nav-item"> <a class="nav-link login-top" data-toggle="modal" data-target="#exampleModal"
+                data-whatever="@mdo" href="#">Login</a> </li>
+            <li class="nav-item d-lg-none"> <a class="nav-link login-top" data-toggle="modal"
+                data-target="#creataccount" data-whatever="@mdo" href="#">Register</a> </li>
+          </ul> <button class="btn btn-dark Register_btn d-none d-lg-block" data-toggle="modal"
+            data-target="#creataccount" data-whatever="@mdo">Register</button>
+        </div> <button class="navbar-toggler show-sub-div-hidden d-lg-none" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" ria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <div class="navbar--right">
+            <div class="hamburger" id="hamburger" onclick="toggleNav();"> </div>
           </div>
-        </div>
-      </button>
+        </button>
       </div>
     </div>
-  </nav>
-  
-  
-
-  <!-- ******banner start -->
-
-
+  </nav> <!-- ******banner start -->
   <div class="container">
     <div class="banner_bg">
       <div class="row banner_row">
-
         <div class="col-lg-6 col-md-6 col-sm-12 banner">
-
           <h3 class="text-left">Boost your Business with Easy to Create QR Codes</h3>
-          <p class="text-left">
-            Do-It-Yourself QR Codes to Promote Your Business
-          </p>
-          <button class="btn btn-dark" type="button">Create your QR Code<i class="fas fa-arrow-right"></i></button>
+          <p class="text-left"> Do-It-Yourself QR Codes to Promote Your Business </p> <button class="btn btn-dark"
+            type="button">Create your QR Code<i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 banner-img">
-          <figure>
-            <img src="images/main_banner.png" class="img-fluid " alt="">
-          </figure>
-
+          <figure> <img src="images/main_banner.png" class="img-fluid " alt=""> </figure>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <!-- *********banner end -->
-
+  </div> <!-- *********banner end -->
   <!-- **********my life start -->
   <div class="bg">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 my-life-col">
           <div class="My_life_bg">
-            <div class="My_life_img">
-              <img src="./images/My-life.png" class="img-fluid" alt="">
-            </div>
+            <div class="My_life_img"> <img src="./images/My-life.png" class="img-fluid" alt=""> </div>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 my-life-col">
           <div class="my_life_text">
-            <h3>My life is like a QR code. Only those who have a spiritual
-              connect with reading can scan it to find my real self</h3>
-
+            <h3>My life is like a QR code. Only those who have a spiritual connect with reading can scan it to find my
+              real self</h3>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- *********my life end -->
+  </div> <!-- *********my life end -->
   <!-- *******Create your own QR Code start -->
   <section class="container line">
     <div class="row ">
@@ -188,14 +123,12 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 ">
         <div class="QR_Code_box">
-          <div class="QR_Code_img">
-            <img src="images/qr-icon.png" alt="Card image cap">
+          <div class="QR_Code_img"> <img src="images/qr-icon.png" alt="Card image cap">
             <div class="QR_Code_number">1</div>
           </div>
           <div class="QR_Code_content">
             <h3>Select your QR Code content.</h3>
-            <p>Make a choice from our options list: menu,
-              website, apps, PDF, business cards, video, images.</p>
+            <p>Make a choice from our options list: menu, website, apps, PDF, business cards, video, images.</p>
           </div>
         </div>
       </div>
@@ -203,16 +136,12 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="QR_Code_box box2">
-          <div class="QR_Code_img qr-img-1">
-            <img src="images/qr-icon1.png" alt="Card image cap">
+          <div class="QR_Code_img qr-img-1"> <img src="images/qr-icon1.png" alt="Card image cap">
             <div class="QR_Code_number Code_number-1">2</div>
           </div>
           <div class="QR_Code_content Customise">
             <h3>Customise the look and design.</h3>
-            <p>
-              Add the relevant information to our QR generator and
-              click to produce your own unique design.
-            </p>
+            <p> Add the relevant information to our QR generator and click to produce your own unique design. </p>
           </div>
         </div>
       </div>
@@ -220,31 +149,21 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12  ">
         <div class="QR_Code_box">
-          <div class="QR_Code_img qr-img-2">
-            <img src="images/qr-icon2.png" alt="Card image cap">
+          <div class="QR_Code_img qr-img-2"> <img src="images/qr-icon2.png" alt="Card image cap">
             <div class="QR_Code_number Code_number-2">3</div>
           </div>
           <div class="QR_Code_content">
             <h3>Download your own QR code.</h3>
-            <p>
-              Your QR code will be available in different formats (pdf, png, svg). Simply print it or display it in a
-              digital format or to share your own personlised Vcard.
-            </p>
+            <p> Your QR code will be available in different formats (pdf, png, svg). Simply print it or display it in a
+              digital format or to share your own personlised Vcard. </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="QR_Code_button ">
-      <button class="btn btn-dark" type="button">Create your QR Code<i class="fas fa-arrow-right"></i></button>
-
-    </div>
-
-  </section>
-
-  <!-- *******Create your own QR Code end -->
-
+    <div class="QR_Code_button "> <button class="btn btn-dark" type="button">Create your QR Code<i
+          class="fas fa-arrow-right"></i></button> </div>
+  </section> <!-- *******Create your own QR Code end -->
   <!-- **********Create different types of QR codes start -->
-
   <section class="container btns-container">
     <div class="row ">
       <div class="col-lg-12 col-md-12 col-sm-12">
@@ -254,15 +173,12 @@
         </div>
       </div>
     </div>
-
     <div class="row btn-row">
       <div class="col-lg-12 col-md-12 col-sm-12 btns">
         <div class="row ">
-          <div class="col-lg-12 col-md-12 col-sm-12  menu">
-            <button id="menu" class="btn btn-dark" type="button">
-              <div class="svg">
-                <svg class="first-child" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 80 80">
+          <div class="col-lg-12 col-md-12 col-sm-12  menu"> <button id="menu" class="btn btn-dark" type="button">
+              <div class="svg"> <svg class="first-child" id="Layer_1" data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
                   <defs>
                     <style>
                       .cls-1 {
@@ -287,16 +203,12 @@
                   <path d="M35,51.5H28a.5.5,0,0,0,0,1h7a.5.5,0,0,0,0-1Z"></path>
                   <circle cx="29.5" cy="23.5" r="2.5"></circle>
                 </svg>
-
                 <div class="svg_text">
                   <p>Vcard</p>
                 </div>
               </div>
-
-            </button>
-            <button id="vcardplus" class="btn btn-dark" type="button">
-              <div class="svg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+            </button> <button id="vcardplus" class="btn btn-dark" type="button">
+              <div class="svg"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
                   <rect fill="#fff" x="22" y="20.14" width="35" height="41" rx="4"></rect>
                   <path d="M47.5,49.64h-16a1,1,0,0,0,0,2h16a1,1,0,0,0,0-2Z"></path>
                   <path d="M43.5,53.64h-8a1,1,0,0,0,0,2h8a1,1,0,0,0,0-2Z"></path>
@@ -320,11 +232,8 @@
                   <p>Website</p>
                 </div>
               </div>
-
-            </button>
-            <button id="business" class="btn btn-dark" type="button">
-              <div class="svg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+            </button> <button id="business" class="btn btn-dark" type="button">
+              <div class="svg"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
                   <path fill="#fff"
                     d="M61.23,32.83,57.5,24.5v-2a1,1,0,0,0-1-1h-32a1,1,0,0,0-1,1v2l-3.73,8.33a1,1,0,0,0-.27.67v4a1,1,0,0,0,1,1h2v20a2,2,0,0,0,2,2h32a2,2,0,0,0,2-2v-20h2a1,1,0,0,0,1-1v-4A1,1,0,0,0,61.23,32.83Z">
                   </path>
@@ -340,17 +249,14 @@
                   <p>Event</p>
                 </div>
               </div>
-
-            </button>
-          </div>
+            </button> </div>
         </div>
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 ">
             <div class="center-btns">
-              <div class="left-btn">
-                <button id="website" class="btn btn-dark" type="button">
-                  <div class="svg">
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+              <div class="left-btn"> <button id="website" class="btn btn-dark" type="button">
+                  <div class="svg"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 80 80">
                       <defs>
                         <style>
                           .cls-1 {
@@ -376,11 +282,9 @@
                       <p>Bitcoin</p>
                     </div>
                   </div>
-
-                </button>
-                <button id="apps" class="btn btn-dark" type="button">
-                  <div class="svg">
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                </button> <button id="apps" class="btn btn-dark" type="button">
+                  <div class="svg"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 80 80">
                       <defs>
                         <style>
                           .cls-1 {
@@ -403,17 +307,11 @@
                       <p>Social media</p>
                     </div>
                   </div>
-
-                </button>
-              </div>
-
-              <div class="center-img">
-                <img src="./images/center.png" class="img-fluid" alt="">
-              </div>
-              <div class="right-btn">
-                <button id="wifi" class="btn btn-dark" type="button">
-                  <div class="svg">
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                </button> </div>
+              <div class="center-img"> <img src="./images/center.png" class="img-fluid" alt=""> </div>
+              <div class="right-btn"> <button id="wifi" class="btn btn-dark" type="button">
+                  <div class="svg"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 80 80">
                       <defs>
                         <style>
                           .cls-1 {
@@ -448,11 +346,9 @@
                       <p>Google reviwe</p>
                     </div>
                   </div>
-
-                </button>
-                <button id="video" class="btn btn-dark" type="button">
-                  <div class="svg">
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                </button> <button id="video" class="btn btn-dark" type="button">
+                  <div class="svg"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 80 80">
                       <defs>
                         <style>
                           .cls-1 {
@@ -485,17 +381,14 @@
                       <p>Location map</p>
                     </div>
                   </div>
-              </div>
-
-              </button>
+              </div> </button>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 bottom-btn">
-            <button id="pdf" class="btn btn-dark" type="button">
-              <div class="svg">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+          <div class="col-lg-12 col-md-12 col-sm-12 bottom-btn"> <button id="pdf" class="btn btn-dark" type="button">
+              <div class="svg"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 80 80">
                   <defs>
                     <style>
                       .cls-1 {
@@ -519,11 +412,9 @@
                   <p>Url</p>
                 </div>
               </div>
-
-            </button>
-            <button id="images" class="btn btn-dark" type="button">
-              <div class="svg">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+            </button> <button id="images" class="btn btn-dark" type="button">
+              <div class="svg"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 80 80">
                   <defs>
                     <style>
                       .cls-1 {
@@ -542,16 +433,12 @@
                     d="M45.58,39.47a.51.51,0,0,0-.36-.17.42.42,0,0,0-.37.15l-7.09,7.09-3.38-3.87A.51.51,0,0,0,34,42.5a.43.43,0,0,0-.37.15l-8,8a.49.49,0,0,0,.7.7L34,43.73l6.64,7.6a.51.51,0,0,0,.71.05.51.51,0,0,0,.05-.71l-3-3.38,6.76-6.76,9.44,10.8a.51.51,0,0,0,.71.05.51.51,0,0,0,.05-.71Z">
                   </path>
                 </svg>
-
                 <div class="svg_text">
                   <p>Rating</p>
                 </div>
               </div>
-
-            </button>
-            <button id="listoflinks" class="btn btn-dark" type="button">
-              <div class="svg">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+            </button> <button id="listoflinks" class="btn btn-dark" type="button">
+              <div class="svg"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
                   <rect x="21.5" y="19.5" width="37" height="41" rx="4" fill="#fff"></rect>
                   <path
                     d="M54.5,19h-29A4.51,4.51,0,0,0,21,23.5v33A4.51,4.51,0,0,0,25.5,61h29A4.51,4.51,0,0,0,59,56.5v-33A4.51,4.51,0,0,0,54.5,19ZM58,56.5A3.5,3.5,0,0,1,54.5,60h-29A3.5,3.5,0,0,1,22,56.5v-33A3.5,3.5,0,0,1,25.5,20h29A3.5,3.5,0,0,1,58,23.5Z">
@@ -571,148 +458,85 @@
                   <p>Pdf</p>
                 </div>
               </div>
-
-            </button>
-          </div>
+            </button> </div>
         </div>
-
-
       </div>
     </div>
-
-  </section>
-
-
-
-  <!-- ====================Create different types of QR codes =end -==============================-->
-
-
-
-
+  </section> <!-- ====================Create different types of QR codes =end -==============================-->
   <!-- =================================== Subscribe to Qrty and access all the advantages offered ==start=================================== -->
   <div class="content_boxes">
     <section class="container">
       <div class="row ">
         <div class="col-12 p-0">
           <div class="heading text-center ">
-            <h2>
-              Your subscription to QR Code Service is your doorway to infinite business possibilities.
-            </h2>
-
+            <h2> Your subscription to QR Code Service is your doorway to infinite business possibilities. </h2>
           </div>
         </div>
       </div>
       <div class="row">
-
-
         <div class="col-lg-6 col-md-6 col-sm-12 order order-md-2 rigth_box">
           <div class="right_inside">
             <div class="right_side_text">
-              <h2>Try our basic plan for just</h2>
-              <span><b> $9.99</b> <small>/per month</small> </span>
-              <p>
-                After 14 days, your subscription will revert to our basic
-                Plan and be renewed at $120 per annum – unless cancelled on or before Day 14.
-              </p>
-
-              <button class="btn btn-dark" type="button">More Information<i class="fas fa-arrow-right"></i></button>
-
-
+              <h2>Try our basic plan for just</h2> <span><b> $9.99</b> <small>/per month</small> </span>
+              <p> After 14 days, your subscription will revert to our basic Plan and be renewed at $120 per annum –
+                unless cancelled on or before Day 14. </p> <button class="btn btn-dark" type="button">More Information<i
+                  class="fas fa-arrow-right"></i></button>
             </div>
           </div>
         </div>
-
         <div class="col-lg-6 col-md-6 col-sm-12 order-md-1 left_box">
           <div class="left_inside">
-
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Unique, dynamic QR code design.</span>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Unique, dynamic QR code
+                design.</span> </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Simple editing and management
+                tools.</span> </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Unlimited scans.</span>
             </div>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Simple editing and management tools.</span>
-            </div>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Unlimited scans.</span>
-            </div>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Variety of download formats.</span>
-            </div>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Complete QR Code analytics provided.</span>
-            </div>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Export data into multiple formats, such as CSV/XLSX.</span>
-            </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Variety of download
+                formats.</span> </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Complete QR Code analytics
+                provided.</span> </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Export data into multiple
+                formats, such as CSV/XLSX.</span> </div>
           </div>
         </div>
       </div>
     </section>
   </div>
-
   <!-- ===================================Subscribe to Qrty and access all the advantages offered ==end=================================== -->
-
   <!-- //////////QR Code for Vcard Plus- A business card for the 21st Centu start//////////// -->
   <div class="bg">
     <div class="container">
       <div class="row">
         <div class="col-12 Century">
-          <h2>QR Code for Vcard Plus- A business card for the 21st Century
-          </h2>
-          <p>Watch this short video to see just how easy creating your won QR code is.
-          </p>
+          <h2>QR Code for Vcard Plus- A business card for the 21st Century </h2>
+          <p>Watch this short video to see just how easy creating your won QR code is. </p>
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="card_box">
-
         <div class="row">
-
           <div class="col-lg-4 col-md-4 col-sm-12 left_card">
-            <div class="Code_for_Vcard_Plus_img">
-              <img src="./images/play.png" class="img-fluid" alt="">
-            </div>
-
+            <div class="Code_for_Vcard_Plus_img"> <img src="./images/play.png" class="img-fluid" alt=""> </div>
           </div>
           <div class="col-lg-8 col-md-8 col-sm-12 connections">
             <h3>Make instant connections with valuable clients by connecting your QR code to a digital business card.
             </h3>
             <p>Connect instantly with business possibilities.</p>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Instant access to your contact details via your QR Code.</span>
-            </div>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Include your business address to make it even easier for clients to find you.</span>
-            </div>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>A simple tap and your contact details are in their phonebook.</span>
-            </div>
-            <div class="icon">
-              <img src="images/click.png" alt="" class="img-fluid">
-              <span>Connects people with your social media profiles allowing them to discover more about what you can
-                offer them.</span>
-            </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Instant access to your
+                contact details via your QR Code.</span> </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Include your business address
+                to make it even easier for clients to find you.</span> </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>A simple tap and your contact
+                details are in their phonebook.</span> </div>
+            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Connects people with your
+                social media profiles allowing them to discover more about what you can offer them.</span> </div>
           </div>
-
-
         </div>
       </div>
     </div>
-
-
-
-  </div>
-  <!-- //////////QR Code for Vcard Plus- A business card for the 21st Centu end//////////// -->
+  </div> <!-- //////////QR Code for Vcard Plus- A business card for the 21st Centu end//////////// -->
   <!-- //////////Answer all your questions strt -->
   <section class="container">
     <div class="row">
@@ -724,85 +548,52 @@
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="answer_all_your_question">
-          <h3>Answer all your questions</h3>
-          <i class="answer-icon fas fa-arrow-right"></i>
+          <h3>Answer all your questions</h3> <i class="answer-icon fas fa-arrow-right"></i>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- /////////////////Answer all your questions end -->
-
-
-
+  </section> <!-- /////////////////Answer all your questions end -->
   <!-- //////////footer start//////////// -->
-
   <div class="footer">
     <div class="container footer_container">
       <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12 footer_log">
-          <a class=" font-weight-bold" href="index.html">
-            <img class="footer_logo" src="images/main-logo.svg" alt="logo" width="119">
-          </a>
-
+        <div class="col-lg-3 col-md-3 col-sm-12 footer_log"> <a class=" font-weight-bold" href="index.html"> <img
+              class="footer_logo" src="images/main-logo.svg" alt="logo" width="119"> </a>
           <p class="logo-text">QR Code Generator lets you create memorable marketing campaigns with trackable QR
             Codes—designed by you</p>
-
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 services">
-            <div class="footer_collapse hidden visible-md d-lg-none d-md-block" type="button" data-toggle="collapse"
-              data-target="#slide6" aria-expanded="false" aria-controls="slide6">
-              <h3 class="footer_text">
-                Services
-              </h3>
-              <div class="footer-iconx">
-                <div class="plus">
-                  <span><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="mainas">
-                  <span><i class="fas fa-minus"></i></span>
-                </div>
-              </div>
+          <div class="footer_collapse hidden visible-md d-lg-none d-md-block" type="button" data-toggle="collapse"
+            data-target="#slide6" aria-expanded="false" aria-controls="slide6">
+            <h3 class="footer_text"> Services </h3>
+            <div class="footer-iconx">
+              <div class="plus"> <span><i class="fas fa-plus"></i></span> </div>
+              <div class="mainas"> <span><i class="fas fa-minus"></i></span> </div>
             </div>
-
-            <h3 class="d-none d-lg-block footer_heading">
-              Services
-            </h3>
-
-            <div class="collapse footer-collap collapse-xl" id="slide6">
-              <div class="well">
-                <ul>
-                  <li><a href="">CreatQRcode</a></li>
-                </ul>
-              </div>
+          </div>
+          <h3 class="d-none d-lg-block footer_heading"> Services </h3>
+          <div class="collapse footer-collap collapse-xl" id="slide6">
+            <div class="well">
+              <ul>
+                <li><a href="">CreateQRcode</a></li>
+              </ul>
             </div>
+          </div>
         </div>
-
-
         <div class="col-lg-3 col-md-3 col-sm-12 prices">
           <div class="footer_collapse hidden visible-md d-lg-none d-md-block" type="button" data-toggle="collapse"
             data-target="#slide7" aria-expanded="false" aria-controls="slide7">
-            <h3 class="footer_text">
-              Company
-            </h3>
+            <h3 class="footer_text"> Company </h3>
             <div class="footer-iconx">
-              <div class="plus">
-                <span><i class="fas fa-plus"></i></span>
-              </div>
-              <div class="mainas">
-                <span><i class="fas fa-minus"></i></span>
-              </div>
+              <div class="plus"> <span><i class="fas fa-plus"></i></span> </div>
+              <div class="mainas"> <span><i class="fas fa-minus"></i></span> </div>
             </div>
           </div>
-
-          <h3 class="d-none d-lg-block footer_heading">
-            Company
-          </h3>
-
+          <h3 class="d-none d-lg-block footer_heading"> Company </h3>
           <div class="collapse footer-collap collapse-xl" id="slide7">
             <div class="well">
               <ul>
-                <li><a href="">Prices</a></li>
+                <li><a href="price.html">Prices</a></li>
                 <li><a href="">Terms of use and contract </a></li>
                 <li><a href="">Privacy and policy </a></li>
                 <li><a href="">Cookies policy </a></li>
@@ -810,46 +601,29 @@
             </div>
           </div>
         </div>
-
-
         <div class="col-lg-3 col-md-3 col-sm-12 help">
           <div class="footer_collapse hidden visible-md d-lg-none d-md-block" type="button" data-toggle="collapse"
             data-target="#slide8" aria-expanded="false" aria-controls="slide8">
-            <h3 class="footer_text">
-              Help
-            </h3>
+            <h3 class="footer_text"> Help </h3>
             <div class="footer-iconx">
-              <div class="plus">
-                <span><i class="fas fa-plus"></i></span>
-              </div>
-              <div class="mainas">
-                <span><i class="fas fa-minus"></i></span>
-              </div>
+              <div class="plus"> <span><i class="fas fa-plus"></i></span> </div>
+              <div class="mainas"> <span><i class="fas fa-minus"></i></span> </div>
             </div>
           </div>
-
-          <h3 class="d-none d-lg-block footer_heading">
-            Help
-          </h3>
-
+          <h3 class="d-none d-lg-block footer_heading"> Help </h3>
           <div class="collapse footer-collap collapse-xl" id="slide8">
             <div class="well">
               <ul>
                 <li><a href="">Contact us</a></li>
                 <li><a href="">FAQ</a></li>
                 <li><a href="">Cancel subscription</a></li>
-
-
               </ul>
               <h3>Get in Touch</h3>
-              <p>Support@QRCODESSERVICES.com</p>
+              <p>Support@qrcodesservices.com</p>
             </div>
           </div>
         </div>
-
-
       </div>
-
       <div class="row">
         <div class="col-12 p-0">
           <div class="copy-right-foter">
@@ -858,31 +632,15 @@
             </div>
             <div class="foter-btn">
               <ul class="navbar-nav">
-                <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
-              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 Language
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"></a>
-             
-                
-              </div>
-            </li> -->
+                <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Language </a> <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#"></a> </div> </li> -->
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <!-- //////////footer start//////////// -->
-
-
+  </div> <!-- //////////footer start//////////// -->
   <!-- Register Model here -->
-
   <div class="modal fade right" id="creataccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true" data-backdrop="true">
     <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-danger register_modal" role="document">
@@ -890,157 +648,82 @@
       <div class="modal-content">
         <!--Header-->
         <div class="modal-header">
-          <p class="heading">
-            Create account
-          </p>
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" class="white-text">&times;</span>
-          </button>
+          <p class="heading"> Create account </p> <button type="button" class="close" data-dismiss="modal"
+            aria-label="Close"> <span aria-hidden="true" class="white-text">&times;</span> </button>
         </div>
-
         <!--Body-->
         <div class="modal-body">
-
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 ">
               <div class="modal-contet">
                 <h1>Make Your Life</h1>
                 <h3>Very Easy</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, reiciendis
-                  asperiores? Quae expedita deleniti error aperiam et veniam magni obcaecati?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, reiciendis asperiores? Quae expedita
+                  deleniti error aperiam et veniam magni obcaecati?</p>
               </div>
-              <div class="modal-img">
-                <img src="images/register.png" class="img-fluid" alt="">
-              </div>
+              <div class="modal-img"> <img src="images/register.png" class="img-fluid" alt=""> </div>
             </div>
-
             <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="rgr-form-inside">
-
-
                 <form action="/action_page.php">
-                  <div class="input-container">
-                    <i class="fa fa-user Register_icon"></i>
-                    <input class="input-field" type="text" placeholder="Username" name="usrnm">
-                  </div>
-
-                  <div class="input-container">
-                    <i class="fa fa-envelope Register_icon"></i>
-                    <input class="input-field" type="text" placeholder="Email" name="email">
-                  </div>
-
-                  <div class="input-container ">
-                    <i class="fa fa-key Register_icon "></i>
-                    <input class="input-field third" type="password" placeholder="Password" name="psw">
-                    <i class="fas fa-eye-slash Register_icon show"></i>
-                  </div>
-
-                  <button type="submit" class="btn  btn-dark ">Create your account</button>
+                  <div class="input-container"> <i class="fa fa-user Register_icon"></i> <input class="input-field"
+                      type="text" placeholder="Username" name="usrnm"> </div>
+                  <div class="input-container"> <i class="fa fa-envelope Register_icon"></i> <input class="input-field"
+                      type="text" placeholder="Email" name="email"> </div>
+                  <div class="input-container "> <i class="fa fa-key Register_icon "></i> <input
+                      class="input-field third" type="password" placeholder="Password" name="psw"> <i
+                      class="fas fa-eye-slash Register_icon show"></i> </div> <button type="submit"
+                    class="btn  btn-dark ">Create your account</button>
                 </form>
-
-                <div class="contuine-with">
-                  <span>Or contuine with</span>
-                </div>
-                <div class="rgestr-social-icon">
-                  <img src="images/fb.png" alt="">
-                  <img src="images/google.png" alt="">
-                  <img src="images/window (1).png" alt="">
-
-
-
-                </div>
+                <div class="contuine-with"> <span>Or contuine with</span> </div>
+                <div class="rgestr-social-icon"> <img src="images/fb.png" alt=""> <img src="images/google.png" alt="">
+                  <img src="images/window (1).png" alt=""> </div>
                 <div class="alrdy-acc">
-                  <p>
-                    Already have an account?
-                    <a href="">login</a>
-                  </p>
+                  <p> Already have an account? <a href="">login</a> </p>
                 </div>
                 <div class="agree">
-                  <p>
-                    By creating an account, I agree to QRcodeservice
-                    <a href="">Website terms</a>
-                    <a href="">Privacy policy</a>and
-                    <a href="">Licensing terms.</a>
-
-                  </p>
+                  <p> By creating an account, I agree to QRcodeservice <a href="">Website terms</a> <a href="">Privacy
+                      policy</a>and <a href="">Licensing terms.</a> </p>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--  ===============================================e================================================-->
-
-
-
+  </div> <!--  ===============================================e================================================-->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <p class="heading m-0" id="exampleModalLabel">Login</p>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <p class="heading m-0" id="exampleModalLabel">Login</p> <button type="button" class="close"
+            data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
         </div>
         <div class="modal-body">
-
           <form class="login-form" action="/action_page.php">
-
-
-            <div class="input-container">
-              <i class="fa fa-envelope Register_icon"></i>
-              <input class="input-field" type="text" placeholder="Email" name="email">
+            <div class="input-container"> <i class="fa fa-envelope Register_icon"></i> <input class="input-field"
+                type="text" placeholder="Email" name="email"> </div>
+            <div class="input-container "> <i class="fa fa-key Register_icon "></i> <input class="input-field third"
+                type="password" placeholder="Password" name="psw"> <i class="fas fa-eye-slash Register_icon show"></i>
             </div>
-
-            <div class="input-container ">
-              <i class="fa fa-key Register_icon "></i>
-              <input class="input-field third" type="password" placeholder="Password" name="psw">
-              <i class="fas fa-eye-slash Register_icon show"></i>
-            </div>
-            <div class="forget-password">
-              <a href="">Forget Your Password</a>
-            </div>
-
-            <button type="submit" class="btn  btn-dark ">Login</button>
+            <div class="forget-password"> <a href="">Forget Your Password</a> </div> <button type="submit"
+              class="btn  btn-dark ">Login</button>
           </form>
-          <div class="contuine-with">
-            <span>Or contuine with</span>
-          </div>
-          <div class="rgestr-social-icon">
-            <img src="images/fb.png" alt="">
-            <img src="images/google.png" alt="">
-            <img src="images/window (1).png" alt="">
-          </div>
-
+          <div class="contuine-with"> <span>Or contuine with</span> </div>
+          <div class="rgestr-social-icon"> <img src="images/fb.png" alt=""> <img src="images/google.png" alt=""> <img
+              src="images/window (1).png" alt=""> </div>
           <div class="dont-have-acc">
-            <p>
-              <a href="">Don,t Have Account? </a>
-
-            </p>
-            <button type="submit" class="btn creat_acc  btn-dark ">Create Your Account</button>
+            <p> <a href="">Don,t Have Account? </a> </p> <button type="submit" class="btn creat_acc  btn-dark ">Create
+              Your Account</button>
           </div>
-
         </div>
-
       </div>
     </div>
-  </div>
-
-
-
-
-  <!-- Optional JavaScript; choose one of the two! -->
-
+  </div> <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-
   <!-- Option 2: Separate Popper and Bootstrap JS -->
-
   <!-- <script src="qrt.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -1048,14 +731,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
-  <script>
-    $(".footer_collapse").click(function () {
-      $(this).next(".plus").slideToggle("500");
-      $(this).find("i").toggleClass("fa-plus fa-minus");
-    });
-
-
-  </script>
+  <script> $(".footer_collapse").click(function () { $(this).next(".plus").slideToggle("500"); $(this).find("i").toggleClass("fa-plus fa-minus"); });</script>
 </body>
 
 </html>
