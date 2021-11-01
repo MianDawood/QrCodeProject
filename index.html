@@ -28,57 +28,71 @@
   <title>Create QR codes</title>
 </head>
 <script
-  type="text/javascript"> function toggleNav() { document.getElementById("main-nav").classList.toggle('show'); }</script>
+  type="text/javascript"> function toggleNav() { document.querySelector(".header-links").classList.toggle('show'); }</script>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-nav">
-    <div class="container"> <a class="navbar-brand font-weight-bold" href="index.html"> <img src="images/main-logo.svg"
-          class="img-fluid" alt="logo"> </a> <button class="navbar-toggler" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent" ria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <div class="navbar--right">
-          <div class="hamburger" id="hamburger" onclick="toggleNav();">
-            <div class="icon1"></div>
-            <div class="icon2"></div>
-            <div class="icon3"></div>
-          </div>
-        </div>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="show-sub-div d-flex align-items-center">
-          <div class="logo logo-toggle"> <a class="navbar-brand font-weight-bold" href="index.html"> <img
-                src="images/main-logo-white.svg" class="img-fluid" alt="logo"> </a> <button class="navbar-toggler"
-              type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              ria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <div class="navbar--right">
-                <div class="hamburger" id="hamburger" onclick="toggleNav();">
-                  <div class="icon1 icon4"></div>
-                  <div class="icon3 icon5"></div>
-                </div>
-              </div>
-            </button> </div>
-          <ul class="navbar-nav ml-auto topbar-menu">
-            <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Language </a> <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#"></a> </div> </li> -->
-            <li class="nav-item"> <a class="nav-link active" href="qrgenrator.html">QR Code Generator</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="price.html">Prices</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="faq.html">FAQ</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="contact.html">Contact us</a> </li>
-            <li class="nav-item"> <a class="nav-link login-top" data-toggle="modal" data-target="#exampleModal"
-                data-whatever="@mdo" href="#">Login</a> </li>
-            <li class="nav-item d-lg-none"> <a class="nav-link login-top" data-toggle="modal"
-                data-target="#creataccount" data-whatever="@mdo" href="#">Register</a> </li>
-          </ul> <button class="btn btn-dark Register_btn d-none d-lg-block" data-toggle="modal"
-            data-target="#creataccount" data-whatever="@mdo">Register</button>
-        </div> <button class="navbar-toggler show-sub-div-hidden d-lg-none" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent" ria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <div class="navbar--right">
-            <div class="hamburger" id="hamburger" onclick="toggleNav();"> </div>
-          </div>
-        </button>
+  <header>
+    <div class="logo-img">
+      <img
+        src="https://compassionate-swartz-b106f6.netlify.app/images/main-logo.svg"
+        alt=""
+      />
+      <div class="lines" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-  </nav> <!-- ******banner start -->
+    <div class="header-links">
+      <div class="link-items">
+        <ul>
+          <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Language </a> <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#"></a> </div> </li> -->
+          <li>
+            <a href="qrgenrator.html">QR Code Generator</a>
+          </li>
+          <li>
+            <a href="price.html">Prices</a>
+          </li>
+          <li>
+            <a href="faq.html">FAQ</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact us</a>
+          </li>
+          <li>
+            <a
+              class="nav-link login-top"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              data-whatever="@mdo"
+              href="#"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item d-lg-none">
+            <a
+              class="nav-link login-top"
+              data-toggle="modal"
+              data-target="#creataccount"
+              data-whatever="@mdo"
+              href="#"
+              >Register</a
+            >
+          </li>
+        </ul>
+        <button
+          class="btn btn-dark Register_btn d-none d-lg-block"
+          data-toggle="modal"
+          data-target="#creataccount"
+          data-whatever="@mdo"
+        >
+          Register
+        </button>
+      </div>
+      <div class="closing-btn" onclick="toggleNav()"></div>
+    </div>
+  </header>
+   <!-- ******banner start -->
   <div class="container">
     <div class="banner_bg">
       <div class="row banner_row">

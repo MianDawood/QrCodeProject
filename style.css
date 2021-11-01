@@ -2992,33 +2992,40 @@ h3 {
   .navbar-collapse {
   position: fixed;
   top: 0px;
-  left: -100%;
+  left: 0;
   width: 100%;
-  height: 100%;
-  transition: all .3s ease-in-out;
+  height: 100vh;
+  transition: all 1s ease-in-out;
   z-index: 5;
-  display: block;
 
+  display: flex;
 }
 
 
 .navbar-collapse.show {
   left: 0;
   display: flex;
-  align-items: flex-start !important;
 }
+
+
 
 .navbar-collapse.show .show-sub-div {
   padding: 1rem 0 1rem 20px;
-  flex-flow: column;
   background: #010711;
   margin: 0;
 
   width: 70%;
   height: 100%;
+
+  flex-flow: column;
   justify-content: flex-start;
 
   box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.781);
+}
+
+.navbar-collapse .show-sub-div {
+  flex-flow: column;
+  justify-content: flex-start;
 }
 
 .show-sub-div-hidden {
@@ -3034,7 +3041,7 @@ h3 {
   display: block;
 }
 .navbar-nav li a {
-  color: #ffffff !important;
+  color: white !important;
   font-size: .8rem;
 }
 .topbar-menu{
@@ -3109,3 +3116,114 @@ h3 {
  
  
   /*  */
+
+  /* Header Overwritten Styles */
+
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    margin: 1rem 0;
+  }
+  header .lines {
+    display: none;
+  }
+  
+  header .lines span {
+    display: block;
+    margin: 3px 0;
+    width: 20px;
+    height: 2px;
+  
+    background-color: black;
+  }
+  
+  header .header-links .link-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .header-links ul {
+    display: inherit;
+    list-style-type: none;
+    margin: 0;
+    
+  }
+  header .header-links ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0D161D !important;
+    font-size: 18px;
+    transition: 0.9s;
+    position: relative;
+    font-family: 'GMedium';
+  }
+  header .header-links ul li a::before {
+    content: "";
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(129, 110, 211);
+    transition: 0.5s;
+  }
+
+  header .header-links ul a:hover::before {
+    transform: scale(1);
+    width: 100%;
+  }
+  
+  @media (max-width: 800px) {
+    header {
+    }
+    header .lines {
+      display: block;
+    }
+    header .logo-img {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    header .header-links {
+      position: fixed;
+      top: 0;
+      left: -100%;
+
+      display: flex;
+      
+      z-index: 5;
+      
+      width: 100%;
+      height: 100%;
+      
+      transition: all 300ms ease-in-out;
+    }
+    
+    header .header-links .link-items {
+      background: #010711;
+      box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.781);
+      width: 70%;
+      height: 100%;
+    }
+    header .header-links .closing-btn {
+      width: 30%;
+      height: 100%;
+    }
+  
+    header .header-links.show {
+      left: 0;
+    }
+  
+    header .header-links .link-items,
+    header .header-links ul {
+      flex-flow: column;
+    }
+  }
+  
