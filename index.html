@@ -18,37 +18,50 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> -->
   <!-- Latest compiled JavaScript -->
-  <link rel="stylesheet" href="gilroy-bold-cufonfonts-webfont/Gilroy-Medium.woff">
-  <link rel="stylesheet" href="gilroy-bold-cufonfonts-webfont/Gilroy-Regular.woff">
-  <link rel="stylesheet" href="gilroy-bold-cufonfonts-webfont/Gilroy-Bold.woff">
+  <link rel="stylesheet" href="assets/gilroy-bold-cufonfonts-webfont/Gilroy-Medium.woff">
+  <link rel="stylesheet" href="assets/gilroy-bold-cufonfonts-webfont/Gilroy-Regular.woff">
+  <link rel="stylesheet" href="assets/gilroy-bold-cufonfonts-webfont/Gilroy-Bold.woff">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
   <title>Create QR codes</title>
 </head>
-<script
-  type="text/javascript"> function toggleNav() { document.querySelector(".header-links").classList.toggle('show'); }</script>
+<script type="text/javascript">
+  function toggleNav() {
+    document.querySelector(".header-links").classList.toggle('show');
+  }
+</script>
 
 <body>
   <header>
     <div class="logo-img">
-      <img
-        src="https://compassionate-swartz-b106f6.netlify.app/images/main-logo.svg"
-        alt=""
-      />
+      <div class="py-4">
+        <a href="index.html">
+          <img width="150" src="assets/images/main-logo.svg" alt="" />
+        </a>
+      </div>
       <div class="lines" onclick="toggleNav()">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span style="background-color: #759DFE;"></span>    
+        <span style="background-color: #FDBCCB;"></span>
+        <span style="background-color: #FDDF37;"></span>
       </div>
     </div>
     <div class="header-links">
       <div class="link-items">
         <ul>
+          <li class="toggle-li d-lg-none">
+            <div class="logo-img">
+              <img class="img-fluid" src="assets/images/main-logo-white.svg" alt="" />
+            </div>
+            <div class="lines px-2" onclick="toggleNav()">
+              <span class="close"> &times;</span>
+
+            </div>
+          </li>
           <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Language </a> <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#"></a> </div> </li> -->
           <li>
-            <a href="qrgenrator.html">QR Code Generator</a>
+            <a href="qr-gen.html">QR Code Generator</a>
           </li>
           <li>
             <a href="price.html">Prices</a>
@@ -60,39 +73,23 @@
             <a href="contact.html">Contact us</a>
           </li>
           <li>
-            <a
-              class="nav-link login-top"
-              data-toggle="modal"
-              data-target="#exampleModal"
-              data-whatever="@mdo"
-              href="#"
-              >Login</a
-            >
+            <a class="nav-link login-top" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"
+              href="#">Login</a>
           </li>
           <li class="nav-item d-lg-none">
-            <a
-              class="nav-link login-top"
-              data-toggle="modal"
-              data-target="#creataccount"
-              data-whatever="@mdo"
-              href="#"
-              >Register</a
-            >
+            <a class="nav-link login-top" data-toggle="modal" data-target="#creataccount" data-whatever="@mdo"
+              href="#">Register</a>
           </li>
         </ul>
-        <button
-          class="btn btn-dark Register_btn d-none d-lg-block"
-          data-toggle="modal"
-          data-target="#creataccount"
-          data-whatever="@mdo"
-        >
+        <button class="btn btn-dark Register_btn d-none d-lg-block" data-toggle="modal" data-target="#creataccount"
+          data-whatever="@mdo">
           Register
         </button>
       </div>
       <div class="closing-btn" onclick="toggleNav()"></div>
     </div>
   </header>
-   <!-- ******banner start -->
+  <!-- ******banner start -->
   <div class="container">
     <div class="banner_bg">
       <div class="row banner_row">
@@ -102,7 +99,7 @@
             type="button">Create your QR Code<i class="fas fa-arrow-right"></i></button>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 banner-img">
-          <figure> <img src="images/main_banner.png" class="img-fluid " alt=""> </figure>
+          <figure> <img src="assets/images/main_banner.png" class="img-fluid " alt=""> </figure>
         </div>
       </div>
     </div>
@@ -113,7 +110,7 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 my-life-col">
           <div class="My_life_bg">
-            <div class="My_life_img"> <img src="./images/My-life.png" class="img-fluid" alt=""> </div>
+            <div class="My_life_img"> <img src="assets/images/My-life.png" class="img-fluid" alt=""> </div>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 my-life-col">
@@ -137,7 +134,7 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 ">
         <div class="QR_Code_box">
-          <div class="QR_Code_img"> <img src="images/qr-icon.png" alt="Card image cap">
+          <div class="QR_Code_img"> <img src="assets/images/qr-icon.png" alt="Card image cap">
             <div class="QR_Code_number">1</div>
           </div>
           <div class="QR_Code_content">
@@ -150,7 +147,7 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="QR_Code_box box2">
-          <div class="QR_Code_img qr-img-1"> <img src="images/qr-icon1.png" alt="Card image cap">
+          <div class="QR_Code_img qr-img-1"> <img src="assets/images/qr-icon1.png" alt="Card image cap">
             <div class="QR_Code_number Code_number-1">2</div>
           </div>
           <div class="QR_Code_content Customise">
@@ -163,7 +160,7 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12  ">
         <div class="QR_Code_box">
-          <div class="QR_Code_img qr-img-2"> <img src="images/qr-icon2.png" alt="Card image cap">
+          <div class="QR_Code_img qr-img-2"> <img src="assets/images/qr-icon2.png" alt="Card image cap">
             <div class="QR_Code_number Code_number-2">3</div>
           </div>
           <div class="QR_Code_content">
@@ -322,7 +319,7 @@
                     </div>
                   </div>
                 </button> </div>
-              <div class="center-img"> <img src="./images/center.png" class="img-fluid" alt=""> </div>
+              <div class="center-img"> <img src="assets/images/center.png" class="img-fluid" alt=""> </div>
               <div class="right-btn"> <button id="wifi" class="btn btn-dark" type="button">
                   <div class="svg"> <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 80 80">
@@ -500,17 +497,17 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 order-md-1 left_box">
           <div class="left_inside">
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Unique, dynamic QR code
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Unique, dynamic QR code
                 design.</span> </div>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Simple editing and management
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Simple editing and management
                 tools.</span> </div>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Unlimited scans.</span>
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Unlimited scans.</span>
             </div>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Variety of download
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Variety of download
                 formats.</span> </div>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Complete QR Code analytics
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Complete QR Code analytics
                 provided.</span> </div>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Export data into multiple
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Export data into multiple
                 formats, such as CSV/XLSX.</span> </div>
           </div>
         </div>
@@ -532,19 +529,19 @@
       <div class="card_box">
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-12 left_card">
-            <div class="Code_for_Vcard_Plus_img"> <img src="./images/play.png" class="img-fluid" alt=""> </div>
+            <div class="Code_for_Vcard_Plus_img"> <img src="assets/images/play.png" class="img-fluid" alt=""> </div>
           </div>
           <div class="col-lg-8 col-md-8 col-sm-12 connections">
             <h3>Make instant connections with valuable clients by connecting your QR code to a digital business card.
             </h3>
             <p>Connect instantly with business possibilities.</p>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Instant access to your
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Instant access to your
                 contact details via your QR Code.</span> </div>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Include your business address
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Include your business address
                 to make it even easier for clients to find you.</span> </div>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>A simple tap and your contact
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>A simple tap and your contact
                 details are in their phonebook.</span> </div>
-            <div class="icon"> <img src="images/click.png" alt="" class="img-fluid"> <span>Connects people with your
+            <div class="icon"> <img src="assets/images/click.png" alt="" class="img-fluid"> <span>Connects people with your
                 social media profiles allowing them to discover more about what you can offer them.</span> </div>
           </div>
         </div>
@@ -572,7 +569,7 @@
     <div class="container footer_container">
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12 footer_log"> <a class=" font-weight-bold" href="index.html"> <img
-              class="footer_logo" src="images/main-logo.svg" alt="logo" width="119"> </a>
+              class="footer_logo" src="assets/images/main-logo.svg" alt="logo" width="119"> </a>
           <p class="logo-text">QR Code Generator lets you create memorable marketing campaigns with trackable QR
             Codes—designed by you</p>
         </div>
@@ -655,18 +652,14 @@
     </div>
   </div> <!-- //////////footer start//////////// -->
   <!-- Register Model here -->
-  <div class="modal fade right" id="creataccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  <div class="modal fade right p-3" id="creataccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true" data-backdrop="true">
     <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-danger register_modal" role="document">
       <!--Content-->
       <div class="modal-content">
-        <!--Header-->
-        <div class="modal-header">
-          <p class="heading"> Create account </p> <button type="button" class="close" data-dismiss="modal"
-            aria-label="Close"> <span aria-hidden="true" class="white-text">&times;</span> </button>
-        </div>
+        
         <!--Body-->
-        <div class="modal-body">
+        <div class="modal-body m-4">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 ">
               <div class="modal-contet">
@@ -675,10 +668,11 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, reiciendis asperiores? Quae expedita
                   deleniti error aperiam et veniam magni obcaecati?</p>
               </div>
-              <div class="modal-img"> <img src="images/register.png" class="img-fluid" alt=""> </div>
+              <div class="modal-img"> <img src="assets/images/register.png" class="img-fluid" alt=""> </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
-              <div class="rgr-form-inside">
+              <div class="rgr-form-inside p-3">
+                <h4 class="font-weight-bold">Create Your Account</h4>
                 <form action="/action_page.php">
                   <div class="input-container"> <i class="fa fa-user Register_icon"></i> <input class="input-field"
                       type="text" placeholder="Username" name="usrnm"> </div>
@@ -690,8 +684,8 @@
                     class="btn  btn-dark ">Create your account</button>
                 </form>
                 <div class="contuine-with"> <span>Or contuine with</span> </div>
-                <div class="rgestr-social-icon"> <img src="images/fb.png" alt=""> <img src="images/google.png" alt="">
-                  <img src="images/window (1).png" alt=""> </div>
+                <div class="rgestr-social-icon"> <img src="assets/images/fb.png" alt=""> <img src="assets/images/google.png" alt="">
+                  <img src="assets/images/window (1).png" alt=""> </div>
                 <div class="alrdy-acc">
                   <p> Already have an account? <a href="">login</a> </p>
                 </div>
@@ -706,15 +700,12 @@
       </div>
     </div>
   </div> <!--  ===============================================e================================================-->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  <div class="modal fade p-3" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <p class="heading m-0" id="exampleModalLabel">Login</p> <button type="button" class="close"
-            data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-        </div>
-        <div class="modal-body">
+        <div class="modal-body m-4">
+          <h4 class="font-weight-bold">Login</h4>
           <form class="login-form" action="/action_page.php">
             <div class="input-container"> <i class="fa fa-envelope Register_icon"></i> <input class="input-field"
                 type="text" placeholder="Email" name="email"> </div>
@@ -725,8 +716,8 @@
               class="btn  btn-dark ">Login</button>
           </form>
           <div class="contuine-with"> <span>Or contuine with</span> </div>
-          <div class="rgestr-social-icon"> <img src="images/fb.png" alt=""> <img src="images/google.png" alt=""> <img
-              src="images/window (1).png" alt=""> </div>
+          <div class="rgestr-social-icon"> <img src="assets/images/fb.png" alt=""> <img src="assets/images/google.png" alt=""> <img
+              src="assets/images/window (1).png" alt=""> </div>
           <div class="dont-have-acc">
             <p> <a href="">Don,t Have Account? </a> </p> <button type="submit" class="btn creat_acc  btn-dark ">Create
               Your Account</button>
@@ -740,12 +731,17 @@
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!-- <script src="qrt.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
-  <script> $(".footer_collapse").click(function () { $(this).next(".plus").slideToggle("500"); $(this).find("i").toggleClass("fa-plus fa-minus"); });</script>
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+  </script>
+  <script>
+    $(".footer_collapse").click(function () {
+      $(this).next(".plus").slideToggle("500");
+      $(this).find("i").toggleClass("fa-plus fa-minus");
+    });
+  </script>
 </body>
 
 </html>
