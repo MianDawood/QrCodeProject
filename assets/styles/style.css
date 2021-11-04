@@ -3720,7 +3720,7 @@ span.close {
 }
 
 .qr-data .range span {
-  font-size: clamp(.5rem, 3vw, 1rem);
+  font-size: clamp(.5rem, 3vw, .85rem);
 }
 .qr-data .colors {
   border-top: 1px solid black;

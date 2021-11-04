@@ -1,4 +1,15 @@
-# QrCodeProject
-Qr Code project Development
+# 🚀 Welcome to your new awesome project!
 
-https://compassionate-swartz-b106f6.netlify.app/index.html
+This project has been created using **webpack-cli**, you can now run
+
+```
+npm run build
+```
+
+or
+
+```
+yarn build
+```
+
+to bundle your application
