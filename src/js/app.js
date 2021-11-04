@@ -1,6 +1,8 @@
 import 'bootstrap';
 import '../scss/app.scss';
 import QRCodeStyling from "qr-code-styling";
+import Swal from 'sweetalert2';
+
 
 
 const forms = document.querySelectorAll(".qrForm") // Querying Forms in qr-gen.html to prevent them from default submit behaviour
@@ -22,50 +24,53 @@ const qrCode = new QRCodeStyling({
     type: "svg",
     data: "Helle world",
     dotsOptions: {
-      color: "#000",
-      type: "squares"
+        color: "#000",
+        type: "squares"
     },
     imageOptions: {
-      crossOrigin: "anonymous",
-      margin: 20
+        crossOrigin: "anonymous",
+        margin: 20
     },
+    qrOptions: {
+        errorCorrectionLevel: 'M'
+    }
 });
 
 
+qrCode.append(document.getElementById("canvas"));
 
 //Updation of Values taken with the help of eventlistners From User
-qrCode.append(document.getElementById("canvas"));
 
 
 //Updating the Data
 data.addEventListener("keyup", e => {
     e.preventDefault();
-    if(e.code == "Enter") {
-        qrCode.update({
-            data: data.value
-        })
-        qrCode.append(document.getElementById("canvas"));
-    }
+    qrCode.update({
+        data: data.value
+    })
+    qrCode.append(document.getElementById("canvas"));
+    //if (e.code == "Enter") {
+    //}
 })
 
 
 // Updating the Quality of QR Code
 quality.addEventListener("change", e => {
-    if(quality.value == 1) {
+    if (quality.value == 1) {
         qrCode.update({
-            qrOptions : {
+            qrOptions: {
                 errorCorrectionLevel: 'L'
             }
         })
     } else if (quality.value == 2) {
         qrCode.update({
-            qrOptions : {
+            qrOptions: {
                 errorCorrectionLevel: 'M'
             }
         })
     } else {
         qrCode.update({
-            qrOptions : {
+            qrOptions: {
                 errorCorrectionLevel: 'H'
             }
         })
@@ -74,7 +79,19 @@ quality.addEventListener("change", e => {
 })
 
 // Download The Qr Code
-download.addEventListener("click" , () => {
-    qrCode.download({ name: "qr", extension: downloadFormat.value });
-
+download.addEventListener("click", () => {
+    if (downloadFormat.value == "0") {
+        //Using SweetAlert 2
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please Select Format To Download',
+        })
+    } else {
+        qrCode.download({
+            name: "qr",
+            extension: downloadFormat.value
+        })
+        downloadFormat.value = 0;
+    }
 })

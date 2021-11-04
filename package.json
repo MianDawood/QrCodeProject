@@ -39,6 +39,7 @@
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "qr-code-styling": "^1.6.0-rc.1",
+    "sweetalert2": "^11.1.9",
     "webfonts-loader": "^7.3.0"
   }
 }

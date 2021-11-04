@@ -3322,7 +3322,7 @@ a.account-management.answer-u-question {
 
 @media (max-width: 991px) {
   .Register_btn {
-    padding: .7rem 4rem;
+    padding: .7rem 1.5rem;
     background: transparent;
     border: none;
     font-family: 'GMedium';
