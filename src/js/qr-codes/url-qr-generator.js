@@ -63,20 +63,26 @@ quality.addEventListener("change", e => {
 
 // Download The Qr Code
 download.addEventListener("click", () => {
-    localStorage.clear();
-    const extension = downloadFormat.value
-    if (extension == "0") {
-        //Using SweetAlert 2
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Please Select Format To Download',
-        })
-    } else {
-        urlQrCode.download({name: "qr",extension})
-        savingDataLocalStorege();
-        location.reload();
-    
+    const list = document.querySelector(".tab-item-2").classList
+
+    if(!list.value.includes("d-none")) {
+        console.log("Hello url");
+        localStorage.clear();
+        const extension = downloadFormat.value
+        if (extension == "0") {
+            //Using SweetAlert 2
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Select Format To Download',
+            })
+        } else {
+            urlQrCode.download({name: "qr",extension})
+            savingDataLocalStorege();
+            location.reload();
+        
+        }
+
     }
 })
 

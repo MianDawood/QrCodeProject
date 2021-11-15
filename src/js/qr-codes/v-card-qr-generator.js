@@ -1,7 +1,7 @@
 import Swal from "sweetalert2"
 import vCardJS from "vcards-js"
 import { vCardQrCode } from "./qr-module"
-import { canvas, download, quality } from "./variables"
+import { canvas, download, downloadFormat, quality } from "./variables"
 
 const firstName = document.getElementById("first-name")
 const lastName = document.getElementById("last-name")
@@ -19,7 +19,6 @@ const saveBtn = document.querySelector(".vcard button")
 
 
 
-setStoredData();
 vCardQrCode.append(canvas);
 
 //Updation of Values taken with the help of eventlistners From User
@@ -72,23 +71,23 @@ quality.addEventListener("change", e => {
 })
 
 
+download.addEventListener("click", () => {
+    const list = document.querySelector(".tab-item-1").classList;
 
-// Saving Data in Local Storage
+    const extension = downloadFormat.value
 
-function savingDataLocalStorege() {
-    let dataObject = {
-        extension: download.value,
-        quality: quality.value
-    }
-    localStorage.setItem("storedData",JSON.stringify(dataObject))
-}
-
-function setStoredData() {
-    const storedData = JSON.parse(localStorage.getItem("storedData"));
-    if(storedData == null) {
-        return;
-    }
-    download.value = storedData.extension;
-    quality.value = 2;
     
-}
+    if(!list.value.includes("d-none")) {
+        console.log("hello v-card");
+        if (extension == "0") {
+            //Using SweetAlert 2
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Select Format To Download',
+            })
+        } else {
+            vCardQrCode.download({name: "qr",extension: downloadFormat.value})
+        }
+    }
+})
