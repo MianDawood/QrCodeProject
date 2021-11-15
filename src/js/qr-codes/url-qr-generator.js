@@ -1,13 +1,11 @@
-import QRCodeStyling from "qr-code-styling";
-import Swal from 'sweetalert2';
-
+import Swal from "sweetalert2";
+import { urlQrCode, vCardQrCode } from "./qr-module";
+import { canvas, download, downloadFormat, quality } from "./variables";
 
 
 const forms = document.querySelectorAll(".qrForm") // Querying Forms in qr-gen.html to prevent them from default submit behaviour
-const quality = document.getElementById("myRange");
-const data = document.getElementById("inputDataURL");
-const download = document.getElementById("download");
-const downloadFormat = document.getElementById("downloadFormat");
+const urlData = document.querySelector(".url .inputDataURL");
+
 
 
 
@@ -17,37 +15,22 @@ forms.forEach(form => {
     })
 })
 
-const qrCode = new QRCodeStyling({
-    width: 300,
-    type: "svg",
-    data: "Helle world",
-    dotsOptions: {
-        color: "#000",
-        type: "squares"
-    },
-    imageOptions: {
-        crossOrigin: "anonymous",
-        margin: 20
-    },
-    qrOptions: {
-        errorCorrectionLevel: 'M'
-    }
-});
+
+
 
 setStoredData();
-qrCode.append(document.getElementById("canvas"));
 
 //Updation of Values taken with the help of eventlistners From User
 
 
 //Updating the Data
-data.addEventListener("keyup", e => {
+urlData.addEventListener("keyup", e => {
     e.preventDefault();
     localStorage.clear();
-    qrCode.update({
-        data: data.value
+    urlQrCode.update({
+        data: urlData.value
     })
-    qrCode.append(document.getElementById("canvas"));
+    urlQrCode.append(canvas);
     //if (e.code == "Enter") {
     //}
 })
@@ -57,25 +40,25 @@ data.addEventListener("keyup", e => {
 quality.addEventListener("change", e => {
     localStorage.clear();
     if (quality.value == 1) {
-        qrCode.update({
+        urlQrCode.update({
             qrOptions: {
                 errorCorrectionLevel: 'L'
             }
         })
     } else if (quality.value == 2) {
-        qrCode.update({
+        urlQrCode.update({
             qrOptions: {
                 errorCorrectionLevel: 'M'
             }
         })
     } else {
-        qrCode.update({
+        urlQrCode.update({
             qrOptions: {
                 errorCorrectionLevel: 'H'
             }
         })
     }
-    qrCode.append(document.getElementById("canvas"));
+    urlQrCode.append(canvas);
 })
 
 // Download The Qr Code
@@ -90,7 +73,7 @@ download.addEventListener("click", () => {
             text: 'Please Select Format To Download',
         })
     } else {
-        qrCode.download({name: "qr",extension})
+        urlQrCode.download({name: "qr",extension})
         savingDataLocalStorege();
         location.reload();
     
@@ -102,7 +85,7 @@ download.addEventListener("click", () => {
 
 function savingDataLocalStorege() {
     let dataObject = {
-        inputdata: data.value,
+        inputdata: urlData.value,
         extension: downloadFormat.value,
         quality: quality.value
     }
@@ -114,11 +97,11 @@ function setStoredData() {
     if(storedData == null) {
         return;
     }
-    data.value = storedData.inputdata
+    urlData.value = storedData.inputdata
     downloadFormat.value = storedData.extension;
     quality.value = 2;
-    qrCode.update({
-        data: data.value,
+    urlQrCode.update({
+        data: urlData.value,
         
     })
 }
