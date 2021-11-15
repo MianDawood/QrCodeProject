@@ -41,7 +41,6 @@ saveBtn.addEventListener("click", () => {
     vCardQrCode.update({
         data: vCard.getFormattedString(),
     })
-    console.log(vCard.getFormattedString());
 })
 
 
