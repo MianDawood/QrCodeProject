@@ -1,14 +1,11 @@
 import QRCodeStyling from "qr-code-styling";
 import Swal from 'sweetalert2';
 
-
-
 const forms = document.querySelectorAll(".qrForm") // Querying Forms in qr-gen.html to prevent them from default submit behaviour
 const quality = document.getElementById("myRange");
 const data = document.getElementById("inputDataURL");
 const download = document.getElementById("download");
 const downloadFormat = document.getElementById("downloadFormat");
-
 
 
 forms.forEach(form => {
