@@ -108,6 +108,5 @@ function setStoredData() {
     quality.value = 2;
     urlQrCode.update({
         data: urlData.value,
-        
     })
 }
