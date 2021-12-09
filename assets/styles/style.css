@@ -3664,15 +3664,21 @@ span.close {
   justify-content: center;
 }
 
-.qr-generator .card form .label {
+.qr-generator .url .card form .label {
   width: 20%;
 }
 
-.qr-generator .card form .input {
+.qr-generator .url .card form .input {
   width: 80%;
+  font-family: Gregular;
 }
 
-.qr-generator .card input {
+.qr-generator .label {
+  font-family: Gregular;
+}
+
+
+.qr-generator .card input, .qr-generator textarea {
   border-radius: 20px;
   padding: 1.6rem 1rem !important;
 }
@@ -3687,6 +3693,30 @@ span.close {
 
 .qrForm .input {
   width: 100%;
+}
+
+.qrForm ::placeholder {
+  font-family: Gregular;
+  color: rgba(170, 170, 170, 0.659);
+}
+
+
+.qr-generator .input-checkbox {
+  border-radius: 20px;
+  border: 1px solid #ced4da;
+  padding: 1.2rem .7rem;
+}
+.qr-generator .input-checkbox input {
+  width: auto;
+  height: auto;
+}
+.qr-generator .input-checkbox .title {
+  font-size: 1rem;
+  font-family: Gregular;
+  padding: 0 .5rem;
+}
+.qr-generator .input-colorpicker input  {
+  height: 100%;
 }
 
 

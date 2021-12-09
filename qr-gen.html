@@ -182,634 +182,871 @@
   <section class="qr-generator">
     <div class="row pl-lg-3">
       <div class="col-lg-8 input-data p-0">
+
+        <!-- VCard Section -->
         <div class="tab-item tab-item-1 vcard">
-          <div class="card-body card_body faq-body-text">
-            <form class="qrForm">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group d-flex flex-column align-items-start justify-content-center">
-                    <span class="label text-center font-weight-bold">First Name</span>
-                    <div class="input">
-                      <input type="text" class="form-control" id="first-name" aria-describedby="emailHelp"
-                        placeholder="First Name">
+
+          <!-- Main Input Form -->
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseInfo"
+                    aria-expanded="" aria-controls="collapseInfo">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
                     </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group d-flex flex-column align-items-start justify-content-center">
-                    <span class="label text-center font-weight-bold">Last Name</span>
-                    <div class="input">
-                      <input type="text" class="form-control" id="last-name" aria-describedby="emailHelp"
-                        placeholder="Last Name">
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseInfo" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body">
+                  <form class="qrForm">
+                    <div class="row align-items-center">
+      
+                      <!-- First Row Name -->
+                      <div class="col-lg-2">
+                        <div class="label font-weight-bold">Name</div>
+                      </div>
+                      <div class="col-lg-5">          
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="first-name" aria-describedby="emailHelp"
+                              placeholder="First Name">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="last-name" aria-describedby="emailHelp"
+                              placeholder="Last Name">
+                          </div>
+                        </div>
+                      </div>
+      
+      
+                      <!-- Second Row Phone Number -->
+                      <div class="col-lg-2">
+                        <div class="label font-weight-bold">Phone</div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="phone-number" aria-describedby="emailHelp"
+                              placeholder="Phone Number">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="land-line" aria-describedby="emailHelp"
+                              placeholder="Land Line">
+                          </div>
+                        </div>
+                      </div>
+      
+      
+                      <!-- Third Row Email -->
+                      <div class="col-lg-2">
+                        <div class="label font-weight-bold">Email</div>
+                      </div>
+                      <div class="col-lg-10">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
+                              placeholder="Email">
+                          </div>
+                        </div>
+                      </div>
+      
+                      <!-- Fourth Row Orginization -->
+                      <div class="col-lg-2">
+                        <div class="label font-weight-bold">Orginization</div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="company" aria-describedby="emailHelp"
+                              placeholder="Your Orginization Name">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="role" aria-describedby="emailHelp" placeholder="Your Job Title">
+                          </div>
+                        </div>
+                      </div>
+      
+      
+                      <!-- Fifth Row Address -->
+                      <div class="col-lg-2">
+                        <div class="label font-weight-bold">Address</div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="country" aria-describedby="emailHelp" placeholder="Country">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="state" aria-describedby="emailHelp" placeholder="State">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 d-none d-lg-block">
+                        <div class="label font-weight-bold"></div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="city" aria-describedby="emailHelp" placeholder="City">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="zipcode" aria-describedby="emailHelp" placeholder="Zipcode">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 d-none d-lg-block">
+                        <div class="label font-weight-bold"></div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="street" aria-describedby="emailHelp" placeholder="Street">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-5 d-none d-lg-block">
+                      </div>
+      
+                      <!-- Sixth Row Summery -->
+      
+                      <div class="col-lg-2 ">
+                        <div class="label font-weight-bold">Summery</div>
+                      </div>
+                      <div class="col-lg-10">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <textarea name="summery" placeholder="A brief description about you and your skills" class="form-control" id="summery" cols="30" rows="10"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      
                     </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group d-flex flex-column align-items-start justify-content-center">
-                    <span class="label text-center font-weight-bold">Phone Number</span>
-                    <div class="input">
-                      <input type="text" class="form-control" id="phone-number" aria-describedby="emailHelp"
-                        placeholder="Phone Number">
+                    <div class="px-4 text-center py-2 my-3">
+                      <button type="button" class="btn btn-outline-dark py-3 px-4" style="border-radius: 20px;">Generate
+                        VCard</button>
                     </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group d-flex flex-column align-items-start justify-content-center">
-                    <span class="label text-center font-weight-bold">Land Line</span>
-                    <div class="input">
-                      <input type="text" class="form-control" id="land-line" aria-describedby="emailHelp"
-                        placeholder="Land Line">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="form-group d-flex flex-column align-items-start justify-content-center">
-                    <span class="label text-center font-weight-bold">Email</span>
-                    <div class="input">
-                      <input type="text" class="form-control" id="email" aria-describedby="emailHelp"
-                        placeholder="Email">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="form-group d-flex flex-column align-items-start justify-content-center">
-                    <span class="label text-center font-weight-bold">Address</span>
-                    <div class="input">
-                      <input type="text" class="form-control" id="address" aria-describedby="emailHelp"
-                        placeholder="Address">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group d-flex flex-column align-items-start justify-content-center">
-                    <span class="label text-center font-weight-bold">Company</span>
-                    <div class="input">
-                      <input type="text" class="form-control" id="company" aria-describedby="emailHelp"
-                        placeholder="Company">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group d-flex flex-column align-items-start justify-content-center">
-                    <span class="label text-center font-weight-bold">Role</span>
-                    <div class="input">
-                      <input type="text" class="form-control" id="role" aria-describedby="emailHelp"
-                        placeholder="Role">
-                    </div>
-                  </div>
+                  </form>
                 </div>
               </div>
-              <div class="px-4 text-center py-2 my-3">
-                <button type="button" class="btn btn-outline-dark py-3 px-4" style="border-radius: 20px;">Generate VCard</button>
+            </div>
+          </div>
+
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseWeblink"
+                    aria-expanded="" aria-controls="collapseWeblink">
+                    <h5> Web Links</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
               </div>
-            </form>
+              <div id="collapseWeblink" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body">
+                  <form class="qrForm">
+                    <div class="row align-items-center">
+                      <div class="col-lg-2">
+                        <div class="label font-weight-bold">Website Name</div>
+                      </div>
+                      <div class="col-lg-5">          
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="website-name" aria-describedby="emailHelp"
+                              placeholder="Website Name">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-5">
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                          <div class="input">
+                            <input type="text" class="form-control" id="url-link" aria-describedby="emailHelp"
+                              placeholder="Url">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseColors"
+                    aria-expanded="" aria-controls="collapseColors">
+                    <h5> Set Color</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseColors" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body">
+                  <form class="qrForm">
+
+                    <!-- First Row -->
+                    <div class="row align-items-center">
+                      <div class="col-lg-2">
+                        <div class="label font-weight-bold">Foreground Color</div>
+                      </div>
+                      <div class="col-lg-3 px-1">          
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center flex-wrap">
+                          <div class="input input-checkbox d-flex align-items-center">
+                            <div class="pretty p-icon p-round">
+                              <input type="radio" name="icon_solid" />
+                              <div class="state p-primary">
+                                  <i class="icon mdi mdi-check"></i>
+                                  <label>Single Color</label>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 px-1">          
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center flex-wrap">
+                          <div class="input input-checkbox d-flex align-items-center">
+                            <div class="pretty p-icon p-round">
+                              <input type="radio" name="icon_solid" />
+                              <div class="state p-primary">
+                                  <i class="icon mdi mdi-check"></i>
+                                  <label>Color Gradient</label>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 px-1">          
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center flex-wrap">
+                          <div class="input input-checkbox d-flex align-items-center">
+                            <div class="pretty p-default p-curve p-fill">
+                              <input type="checkbox" />
+                              <div class="state p-primary-o">
+                                  <label>Custom Eye Color</label>
+                              </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- First Row -->
+                    <div class="row align-items-center">
+                      <div class="col-lg-2">
+                        <div class="label font-weight-bold">Color</div>
+                      </div>
+                      <div class="col-lg-3 px-1">          
+                        <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center flex-wrap">
+                          <div class="input input-colorpicker d-flex align-items-center">
+                            <input type="color" id="head" name="head" value="#e66465">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- URL Section -->
+        <div class="tab-item d-none tab-item-2 url">
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tab-item d-none tab-item-2 url">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
-                      </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
-                      </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
+
+        <!-- Website Section -->
         <div class="tab-item d-none tab-item-2 website">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
         </div>
+
+        <!-- Event Section -->
         <div class="tab-item d-none tab-item-2 event">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
         </div>
+
+        <!-- PDF Section -->
         <div class="tab-item d-none tab-item-2 pdf">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
         </div>
+
+        <!-- Bitcion Section -->
         <div class="tab-item d-none tab-item-2 bitcion">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
         </div>
+
+        <!-- Rating Section -->
         <div class="tab-item d-none tab-item-2 rating">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
         </div>
+
+        <!-- Social Media Section -->
         <div class="tab-item d-none tab-item-2 social-media">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
         </div>
+
+        <!-- Google Review Section -->
         <div class="tab-item d-none tab-item-2 google-review">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
         </div>
+
+        <!-- More -->
         <div class="tab-item d-none tab-item-2 more">
-            <h4 class="font-weight-bold my-3">QR Code Generator</h4>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
-                      aria-expanded="" aria-controls="collapseThird">
-                      <h5> Basic Information</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          <h4 class="font-weight-bold my-3">QR Code Generator</h4>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThird"
+                    aria-expanded="" aria-controls="collapseThird">
+                    <h5> Basic Information</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
+                data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThird" class="collapse show" aria-labelledby="headingOne"
-                  data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control inputDataURL" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="accordion mb-3" id="accordionExample">
-              <div class="card">
-                <div class="card-header heading_one" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
-                      aria-expanded="" aria-controls="collapseFourth">
-                      <h5> Design, Color and Decorate QR Code</h5>
-                      <div class="arrow">
-                        <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="accordion mb-3" id="accordionExample">
+            <div class="card">
+              <div class="card-header heading_one" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFourth"
+                    aria-expanded="" aria-controls="collapseFourth">
+                    <h5> Design, Color and Decorate QR Code</h5>
+                    <div class="arrow">
+                      <i class="fas fa-chevron-up"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body card_body faq-body-text">
+                  <form class="qrForm">
+                    <div class="form-group d-flex align-items-center justify-content-center">
+                      <div class="label text-center font-weight-bold">Url or Text</div>
+                      <div class="input">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Enter email">
                       </div>
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseFourth" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body card_body faq-body-text">
-                    <form class="qrForm">
-                      <div class="form-group d-flex align-items-center justify-content-center">
-                        <div class="label text-center font-weight-bold">Url or Text</div>
-                        <div class="input">
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
       <div class="col-lg-4 qr-data">
         <div class="main-qr-code p-2">
 
-          
+
           <div class="text-center canvas" width="100%" height="400"></div>
         </div>
         <div class="range px-4">
@@ -849,9 +1086,9 @@
         </div>
       </div>
     </div>
-    
-    
-    
+
+
+
   </section>
 
 
@@ -1114,7 +1351,8 @@
                 <div class="contuine-with"> <span>Or contuine with</span> </div>
                 <div class="rgestr-social-icon"> <img src="assets/images/fb.png" alt=""> <img
                     src="assets/images/google.png" alt="">
-                  <img src="assets/images/window (1).png" alt=""> </div>
+                  <img src="assets/images/window (1).png" alt="">
+                </div>
                 <div class="alrdy-acc">
                   <p> Already have an account? <a href="">login</a> </p>
                 </div>
