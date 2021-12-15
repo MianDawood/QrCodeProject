@@ -3678,7 +3678,7 @@ span.close {
 }
 
 
-.qr-generator .card input, .qr-generator textarea {
+.qr-generator .card .form-group input, .qr-generator textarea {
   border-radius: 20px;
   padding: 1.6rem 1rem !important;
 }
@@ -3790,3 +3790,87 @@ span.close {
   width: 100%;
 }
 
+
+
+/* logo Set */
+
+.logo-preview {
+  min-width: 200px;
+  min-height: 200px;
+
+  border-radius: 20px;
+  background-color: #efefef;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper .upload-btn {
+  border: 1px solid #CCD2E3;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  color: #CCD2E3;
+  font-size: 1.5rem;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  padding: 0;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.upload-btn-wrapper input[type=reset] {
+  font-size: 100px;
+  position: absolute;
+  padding: 0;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.logo-bg {
+  background-color: #F9FAFB;
+  padding: 1rem;
+
+  max-height: 300px;
+  overflow-y: scroll;
+
+  border-radius: 20px;
+}
+
+ ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+/* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: #10213A;
+   border-radius: 100px;
+}
+
+/* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.logo-bg .logo-bg-item {
+  background-color: white;
+  border-radius: 20px;
+}
+.logo-bg .logo-bg-item .logo-img{
+  max-width: 100px;
+  min-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+}

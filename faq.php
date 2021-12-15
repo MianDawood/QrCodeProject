@@ -1,94 +1,16 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <!-- favicon------------------------------------------------------------ -->
+<?php include("./includes/Head&Foot/head.php") ?>
 
-  <link rel="apple-touch-icon" sizes="76x76" href="fav_icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="fav_icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="fav_icon/favicon-96x96.png">
-  <link rel="manifest" href="fav-icon/favicon-96x96.png">
-  <link rel="mask-icon" href="fav_icon/favicon-96x96.png" color="#5bbad5">
-  <!-- favicon------------------------------------------------------------ -->
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Latest compiled JavaScript -->
-  <link rel="stylesheet" href="assets/gilroy-bold-cufonfonts-webfont/Gilroy-Medium.woff">
-  <link rel="stylesheet" href="assets/gilroy-bold-cufonfonts-webfont/Gilroy-Regular.woff">
-  <link rel="stylesheet" href="assets/gilroy-bold-cufonfonts-webfont/Gilroy-Bold.woff">
-
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
-  <link rel="stylesheet" href="dist/bundle.css">
-  <link rel="stylesheet" href="assets/styles/style.css">
-
-  <title>Create QR codes</title>
-</head>
-<script type="text/javascript">
-  function toggleNav() {
-    document.querySelector(".header-links").classList.toggle('show');
-  }
-</script>
 
 <body>
-  <header>
-    <div class="logo-img">
-      <div class="py-4">
-        <a href="index.html">
-          <img width="150" src="assets/images/main-logo.svg" alt="" />
-        </a>
-      </div>
-      <div class="lines" onclick="toggleNav()">
-        <span style="background-color: #759DFE;"></span>
-        <span style="background-color: #FDBCCB;"></span>
-        <span style="background-color: #FDDF37;"></span>
-      </div>
-    </div>
-    <div class="header-links">
-      <div class="link-items">
-        <ul>
-          <li class="toggle-li d-lg-none">
-            <div class="logo-img">
-              <img class="img-fluid" src="assets/images/main-logo-white.svg" alt="" />
-            </div>
-            <div class="lines px-2" onclick="toggleNav()">
-              <span class="close"> &times;</span>
 
-            </div>
-          </li>
-          <!-- <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Language </a> <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#"></a> </div> </li> -->
-          <li>
-            <a href="qr-gen.html">QR Code Generator</a>
-          </li>
-          <li>
-            <a href="price.html">Prices</a>
-          </li>
-          <li>
-            <a href="faq.html">FAQ</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact us</a>
-          </li>
-          <li>
-            <a class="nav-link login-top" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"
-              href="#">Login</a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a class="nav-link login-top" data-toggle="modal" data-target="#creataccount" data-whatever="@mdo"
-              href="#">Register</a>
-          </li>
-        </ul>
-        <button class="btn btn-dark Register_btn d-none d-lg-block" data-toggle="modal" data-target="#creataccount"
-          data-whatever="@mdo">
-          Register
-        </button>
-      </div>
-      <div class="closing-btn" onclick="toggleNav()"></div>
-    </div>
-  </header>
+
+  <?php include("./includes/navbar/header.php") ?>
+
+
   <!-- Register Model here -->
   <div class="modal fade right p-3" id="creataccount" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true" data-backdrop="true">
@@ -292,7 +214,7 @@
   </div>
 
 
-  <script src="dist/bundle.js"></script>
+  <?php include("./includes/Head&Foot/footer.php") ?>
   <script>
     $(".accordion").click(function () {
       $(this).next(".arrow").slideToggle("500");

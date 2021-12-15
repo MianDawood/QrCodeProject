@@ -9,6 +9,11 @@ module.exports = {
         path: `${__dirname}/dist`,
         filename: 'bundle.js',
     },
+    resolve: {
+        fallback: {
+            "path": require.resolve("path-browserify")
+        }
+    },
     plugins: [new MiniCssExtractPlugin({filename: 'bundle.css',})],
     module: {
         rules: [{
@@ -18,7 +23,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(scss)$/,
+                test: /\.(scss|css)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
@@ -27,4 +32,5 @@ module.exports = {
             }
         ],
     },
+    
 };
