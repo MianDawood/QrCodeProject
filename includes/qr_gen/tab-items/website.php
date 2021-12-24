@@ -1,4 +1,4 @@
-<div class="tab-item d-none tab-item-2 website">
+<div class="tab-item tab-item-2 website">
           <h4 class="font-weight-bold my-3">QR Code Generator</h4>
           <div class="accordion mb-3" id="accordionExample">
             <div class="card">

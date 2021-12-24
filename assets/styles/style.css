@@ -3867,10 +3867,9 @@ span.close {
 .logo-bg .logo-bg-item {
   background-color: white;
   border-radius: 20px;
+
+  d
 }
 .logo-bg .logo-bg-item .logo-img{
-  max-width: 100px;
-  min-width: 100px;
-  max-height: 100px;
-  min-height: 100px;
+  max-width: 70px;
 }

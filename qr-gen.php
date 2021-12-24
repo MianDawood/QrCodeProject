@@ -12,92 +12,66 @@
 
 
 
-  <?php include("./includes/qr_gen/tabs.php") ?>
-
-
-  <section class="qr-generator">
-    <div class="row pl-lg-3">
-      <div class="col-lg-8 input-data p-0">
-
-        <!-- VCard Section -->
-        <?php include("./includes/qr_gen/tab-items/vcard.php") ?>
-        
-        <!-- URL Section -->
-        <?php include("./includes/qr_gen/tab-items/url.php") ?>
-        
-        <!-- Website Section -->
-        <?php include("./includes/qr_gen/tab-items/website.php") ?>
-        
-        <!-- Event Section -->
-        <?php include("./includes/qr_gen/tab-items/event.php") ?>
-        
-        <!-- PDF Section -->
-        <?php include("./includes/qr_gen/tab-items/pdf.php") ?>
-        
-        <!-- Bitcion Section -->
-        <?php include("./includes/qr_gen/tab-items/bitcoin.php") ?>
-        
-        <!-- Rating Section -->
-        <?php include("./includes/qr_gen/tab-items/rating.php") ?>
-        
-
-        <!-- Social Media Section -->
-        <?php include("./includes/qr_gen/tab-items/social-media.php") ?>
-
-        <!-- Google Review Section -->
-        <?php include("./includes/qr_gen/tab-items/google-review.php") ?>
-        
-        <!-- More -->
-        <?php include("./includes/qr_gen/tab-items/more.php") ?>
-        
-      </div>
-      <div class="col-lg-4 qr-data">
-        <div class="main-qr-code p-2">
-
-
-          <div class="text-center canvas" width="100%" height="400"></div>
-        </div>
-        <div class="range px-4">
-          <input type="range" min="1" max="3" value="2" class="slider myRange">
-          <div class="d-flex justify-content-between my-3">
-            <span>Low Quality</span>
-            <span class="font-weight-bold">200 x 200px </span>
-            <span>High Quality</span>
+  
+  <div id="vueReactive">
+    <?php include("./includes/qr_gen/tabs.php") ?>
+    <section class="qr-generator">
+        <div class="input-data p-0">
+  
+          <!-- VCard Section -->
+          <div v-if="tabs.vCard.value">
+            <?php include("./includes/qr_gen/tab-items/vcard.php") ?>
           </div>
-        </div>
-        <div class="colors py-4 px-4">
-          <p>Customize Your QR Code </p>
-          <div class="d-flex justify-content-between my-2">
-            <span>Sticker</span>
-            <span>Colors</span>
-            <span>Shapes</span>
-            <span>Logo</span>
-            <span><img src="assets/images/tabs-icons/more.svg" alt=""></span>
+          
+          <!-- URL Section -->
+          <div v-if="tabs.url.value">
+            <?php include("./includes/qr_gen/tab-items/url.php") ?>
           </div>
-        </div>
-        <div class="py-4 px-4">
-          <div class="select">
-            <select class="downloadFormat">
-              <option value="0" selected>Choose format</option>
-              <option value="svg">SVG</option>
-              <option value="png">PNG</option>
-              <option value="jpeg">JPEG</option>
-            </select>
-            <div class="select-download">
-              <button class="btn btn-dark Register_btn m-0 download" type="button">Download</button>
-            </div>
+          
+          <!-- Website Section -->
+          <div v-if="tabs.website.value">
+            <?php include("./includes/qr_gen/tab-items/website.php") ?>
           </div>
+          
+
+          <!-- Event Section -->
+          <div v-if="tabs.event.value">
+            <?php include("./includes/qr_gen/tab-items/event.php") ?>
+          </div>
+          
+          <!-- PDF Section -->
+          <div v-if="tabs.pdf.value">
+            <?php include("./includes/qr_gen/tab-items/pdf.php") ?>
+          </div>
+          
+          <!-- Bitcion Section -->
+          <div v-if="tabs.bitcoin.value">
+            <?php include("./includes/qr_gen/tab-items/bitcoin.php") ?>
+          </div>
+          
+          <!-- Rating Section -->
+          <div v-if="tabs.rating.value">
+            <?php include("./includes/qr_gen/tab-items/rating.php") ?>
+          </div>
+          
+          <!-- Social Media Section -->
+          <div v-if="tabs.socialmedia.value">
+            <?php include("./includes/qr_gen/tab-items/social-media.php") ?>
+          </div>
+            
+          <!-- Google Review Section -->
+          <div v-if="tabs.googlereview.value">
+            <?php include("./includes/qr_gen/tab-items/google-review.php") ?>
+          </div>
+          
+          <!-- More -->
+          <div v-if="tabs.more.value">
+            <?php include("./includes/qr_gen/tab-items/more.php") ?>
+          </div>
+          
         </div>
-        <div class="px-4 text-center py-2 my-3">
-          <button type="button" class="btn btn-outline-dark py-3 px-4" style="border-radius: 20px;">Save QR
-            Code</button>
-        </div>
-      </div>
-    </div>
-
-
-
-  </section>
+    </section>
+  </div>
 
 
   <div class="container faq_main_col py-3">
@@ -404,7 +378,7 @@
 
 
 
-
+  <script src="https://unpkg.com/vue@next"></script>
   <?php include("./includes/Head&Foot/footer.php") ?>
   <script>
     $(".footer_collapse").click(function () {

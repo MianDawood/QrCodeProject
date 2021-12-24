@@ -3,14 +3,21 @@ import vCardJS from "vcards-js"
 import { vCardQrCode } from "./qr-module"
 import { canvas, download, downloadFormat, quality } from "./variables"
 
-const firstName = document.getElementById("first-name")
-const lastName = document.getElementById("last-name")
-const phoneNumber = document.getElementById("phone-number")
-const landLine = document.getElementById("land-line")
-const email = document.getElementById("email")
-const address = document.getElementById("address")
-const company = document.getElementById("company")
-const role = document.getElementById("role")
+const firstName = document.querySelector(".vcard .first-name")
+const lastName = document.querySelector(".vcard .last-name")
+const phoneNumber = document.querySelector(".vcard .phone-number")
+const landLineNumber = document.querySelector(".vcard .land-line")
+const email = document.querySelector(".vcard .email")
+const orginization = document.querySelector(".vcard .orginization")
+const role = document.querySelector(".vcard .role")
+
+// Address 
+const country = document.querySelector(".vcard .country")
+const state = document.querySelector(".vcard .state")
+const city = document.querySelector(".vcard .city")
+const zipCode = document.querySelector(".vcard .zipcode")
+const street = document.querySelector(".vcard .street")
+
 
 const saveBtn = document.querySelector(".vcard button")
 
@@ -36,6 +43,7 @@ saveBtn.addEventListener("click", () => {
     vCard.homeAddress = address.value
     vCard.organization = company.value;
     vCard.role = role.value;
+    
 
     vCardQrCode.update({
         data: vCard.getFormattedString(),
