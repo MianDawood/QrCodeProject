@@ -480,7 +480,7 @@
                   <div class="text-center" width="100%" height="400" ref="vCardqrCode"></div>
                 </div>
                 <div class="range px-4">
-                  <input type="range" min="1" max="3" value="2" class="slider myRange">
+                  <input type="range" @change="updatevCardQrCode"  v-model="qrCodeState.quality" min="1" max="3" class="slider myRange">
                   <div class="d-flex justify-content-between my-3">
                     <span>Low Quality</span>
                     <span class="font-weight-bold">200 x 200px </span>
@@ -499,14 +499,14 @@
                 </div>
                 <div class="py-4 px-4">
                   <div class="select">
-                    <select class="downloadFormat">
+                    <select v-model="qrCodeState.format" class="downloadFormat">
                       <option value="0" selected>Choose format</option>
                       <option value="svg">SVG</option>
                       <option value="png">PNG</option>
                       <option value="jpeg">JPEG</option>
                     </select>
                     <div class="select-download">
-                      <button class="btn btn-dark Register_btn m-0 download" type="button">Download</button>
+                      <button @click="qrDownload" class="btn btn-dark Register_btn m-0 download" type="button">Download</button>
                     </div>
                   </div>
                 </div>

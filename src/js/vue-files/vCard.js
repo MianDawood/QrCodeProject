@@ -21,6 +21,11 @@ export const vCardForm = {
     canvas: '<h1>Hello world</h1>',
 }
 
+export const qrCodeStyle = {
+    quality:'',
+    format: '0',
+}
+
 export const vCardQrCode = new QRCodeStyling({
     width: 300,
     type: "svg",
@@ -53,10 +58,31 @@ export const vCardGenerator = () => {
     vCard.homeAddress.street = vCardForm.street;
 
     vCard.note = vCardForm.summery;
+
+
+    switch (qrCodeStyle.quality) {
+        case '1':
+            qrCodeStyle.quality = 'L';
+            break;
+        case '2':
+            qrCodeStyle.quality = 'M';
+            break;
+        case '3':
+            qrCodeStyle.quality = 'H';
+            break;
+    
+        default:
+            qrCodeStyle.quality = 'M';
+            break;
+    }
     
     vCardQrCode.update({
         data: vCard.getFormattedString(),
+        qrOptions: {
+            errorCorrectionLevel: qrCodeStyle.quality
+        }
     })
+    console.log(vCardQrCode._options.qrOptions);
     
 }
 

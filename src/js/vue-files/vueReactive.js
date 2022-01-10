@@ -1,5 +1,6 @@
 import { tabsItems } from "./tabs";
-import { vCardForm, vCardQrCode, vCard, vCardGenerator } from "./vCard";
+import { vCardForm, vCardQrCode, vCard, vCardGenerator,qrCodeStyle } from "./vCard";
+import Swal from "sweetalert2"
 
 
 const app = Vue.createApp({
@@ -9,6 +10,7 @@ const app = Vue.createApp({
             tabs : tabsItems,
 
             vCardState: vCardForm,
+            qrCodeState: qrCodeStyle,
         }
     },
 
@@ -29,10 +31,21 @@ const app = Vue.createApp({
             vCardGenerator();
             vCardQrCode.append(this.$refs["vCardqrCode"]);
         },
+        qrDownload () {
+            if(this.qrCodeState.format != '0') {
+                vCardQrCode.download({name: "qr",extension: this.qrCodeState.format})
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Select Format To Download',
+                })
+            }
+        }
     },
 
     updated () {
-        this.updatevCardQrCode();
+        vCardQrCode.append(this.$refs["vCardqrCode"]);
     },
 
     mounted() {
