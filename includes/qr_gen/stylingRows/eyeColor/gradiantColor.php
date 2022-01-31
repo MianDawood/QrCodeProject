@@ -35,7 +35,7 @@
     </div>
     <div class="col-lg-3">
         <div class="select py-3 px-1">
-        <select @change="updatevCardQrCode" v-model="qrCodeState.dotEyeColorGradiantType" class="downloadFormat">
+        <select @change="updateQrCode" v-model="qrCodeState.dotEyeColorGradiantType" class="downloadFormat">
             <option value="linear" selected>Linear Gradient</option>
             <option value="radial" selected>Radial Gradient</option>
         </select>

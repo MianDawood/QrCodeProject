@@ -29,7 +29,7 @@
                             <div class="col-lg-5">          
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.firstName" class="form-control first-name"
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.firstName" class="form-control first-name"
                                     placeholder="First Name">
                                 </div>
                               </div>
@@ -37,7 +37,7 @@
                             <div class="col-lg-5">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.lastName" class="form-control last-name"
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.lastName" class="form-control last-name"
                                     placeholder="Last Name">
                                 </div>
                               </div>
@@ -51,7 +51,7 @@
                             <div class="col-lg-5">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.phoneNumber" class="form-control phone-number" a
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.phoneNumber" class="form-control phone-number" a
                                     placeholder="Phone Number">
                                 </div>
                               </div>
@@ -59,7 +59,7 @@
                             <div class="col-lg-5">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.landLine" class="form-control land-line"
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.landLine" class="form-control land-line"
                                     placeholder="Land Line">
                                 </div>
                               </div>
@@ -73,7 +73,7 @@
                             <div class="col-lg-10">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.email" class="form-control email" aria-describedby="emailHelp"
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.email" class="form-control email" aria-describedby="emailHelp"
                                     placeholder="Email">
                                 </div>
                               </div>
@@ -86,7 +86,7 @@
                             <div class="col-lg-5">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.orginizationName" class="form-control orginization"
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.orginizationName" class="form-control orginization"
                                     placeholder="Your Orginization Name">
                                 </div>
                               </div>
@@ -94,7 +94,7 @@
                             <div class="col-lg-5">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.jobTitle" class="form-control role" placeholder="Your Job Title">
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.jobTitle" class="form-control role" placeholder="Your Job Title">
                                 </div>
                               </div>
                             </div>
@@ -106,31 +106,14 @@
                             <div class="col-lg-5">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.country" class="form-control country" placeholder="Country">
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.country" class="form-control country" placeholder="Country">
                                 </div>
                               </div>
                             </div>
                             <div class="col-lg-5">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.state" class="form-control state" placeholder="State">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-2 d-none d-lg-block">
-                              <div class="label font-weight-bold"></div>
-                            </div>
-                            <div class="col-lg-5">
-                              <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
-                                <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.city" class="form-control city" placeholder="City">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-lg-5">
-                              <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
-                                <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.zipcode" class="form-control zipcode" placeholder="Zipcode">
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.state" class="form-control state" placeholder="State">
                                 </div>
                               </div>
                             </div>
@@ -140,7 +123,24 @@
                             <div class="col-lg-5">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <input type="text" @keyup="updatevCardQrCode" v-model="vCardState.street" class="form-control street" placeholder="Street">
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.city" class="form-control city" placeholder="City">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                                <div class="input">
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.zipcode" class="form-control zipcode" placeholder="Zipcode">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-2 d-none d-lg-block">
+                              <div class="label font-weight-bold"></div>
+                            </div>
+                            <div class="col-lg-5">
+                              <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
+                                <div class="input">
+                                  <input type="text" @keyup="updateQrCode" v-model="vCardState.street" class="form-control street" placeholder="Street">
                                 </div>
                               </div>
                             </div>
@@ -155,7 +155,7 @@
                             <div class="col-lg-10">
                               <div class="form-group my-3 m-0 d-flex flex-column align-items-center justify-content-center">
                                 <div class="input">
-                                  <textarea name="summery" @keyup="updatevCardQrCode" v-model="vCardState.summery" placeholder="A brief description about you and your skills" class="form-control" id="summery" cols="30" rows="10"></textarea>
+                                  <textarea name="summery" @keyup="updateQrCode" v-model="vCardState.summery" placeholder="A brief description about you and your skills" class="form-control" id="summery" cols="30" rows="10"></textarea>
                                 </div>
                               </div>
                             </div>
@@ -397,46 +397,7 @@
 
 
             <div class="col-lg-4">
-              <div  class="qr-data">
-                <div class="main-qr-code p-2">
-                  <div class="text-center" width="100%" height="400" ref="vCardqrCode"></div>
-                </div>
-                <div class="range px-4">
-                  <input type="range" @change="updatevCardQrCode"  v-model="qrCodeState.quality" min="1" max="3" class="slider myRange">
-                  <div class="d-flex justify-content-between my-3">
-                    <span>Low Quality</span>
-                    <span class="font-weight-bold">200 x 200px </span>
-                    <span>High Quality</span>
-                  </div>
-                </div>
-                <div class="colors py-4 px-4">
-                  <p>Customize Your QR Code </p>
-                  <div class="d-flex justify-content-between my-2">
-                    <span>Sticker</span>
-                    <span>Colors</span>
-                    <span>Shapes</span>
-                    <span>Logo</span>
-                    <span><img src="assets/images/tabs-icons/more.svg" alt=""></span>
-                  </div>
-                </div>
-                <div class="py-4 px-4">
-                  <div class="select">
-                    <select v-model="qrCodeState.format" class="downloadFormat">
-                      <option value="0" selected>Choose format</option>
-                      <option value="svg">SVG</option>
-                      <option value="png">PNG</option>
-                      <option value="jpeg">JPEG</option>
-                    </select>
-                    <div class="select-download">
-                      <button @click="qrDownload" class="btn btn-dark Register_btn m-0 download" type="button">Download</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="px-4 text-center py-2 my-3">
-                  <button type="button" class="btn btn-outline-dark py-3 px-4" style="border-radius: 20px;">Save QR
-                    Code</button>
-                </div>
-              </div>
+              <?php include("./includes/qr_gen/QrCode/qrCodeCol.php") ?>
             </div>
           </div>
           

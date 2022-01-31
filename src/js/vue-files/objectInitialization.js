@@ -1,31 +1,8 @@
-import vCardJS from "vcards-js"
+import { qrData , qrCodeStyle } from "./objects";
+
 import QRCodeStyling from "qr-code-styling";
 
-import { vCardForm , qrCodeStyle } from "./objects";
-import { nodeName } from "jquery";
-
-
-const vCard = vCardJS();
-export const vCardGenerator = () => {
-    vCard.firstName = vCardForm.firstName;
-    vCard.lastName = vCardForm.lastName;
-    vCard.workPhone = vCardForm.phoneNumber;
-    vCard.homePhone = vCardForm.landLine;
-    vCard.email = vCardForm.email;
-    vCard.organization = vCardForm.orginizationName;
-    vCard.role = vCardForm.jobTitle;
-    vCard.homeAddress.countryRegion = vCardForm.country;
-    vCard.homeAddress.stateProvince = vCardForm.state;
-    vCard.homeAddress.city = vCardForm.city;
-    vCard.homeAddress.postalCode = vCardForm.zipcode;
-    vCard.homeAddress.street = vCardForm.street;
-
-    vCard.note = vCardForm.summery;    
-}
-
-
-
-export const vCardQrCode = new QRCodeStyling({
+export const QrCode = new QRCodeStyling({
     width: 300,
     type: "svg",
     data: "Helle world",
@@ -41,7 +18,6 @@ export const vCardQrCode = new QRCodeStyling({
         errorCorrectionLevel: 'M'
     }
 });
-
 
 
 export const qrGen = () => {
@@ -62,8 +38,8 @@ export const qrGen = () => {
             break;
     }
     
-    vCardQrCode.update({
-        data: vCard.getFormattedString(),
+    QrCode.update({
+        data: qrData.data,
         qrOptions: {
             errorCorrectionLevel: qrCodeStyle.quality
         },
@@ -72,11 +48,12 @@ export const qrGen = () => {
     if(qrCodeStyle.color == 'single') {
         qrCodeStyle.gradiantColorOne = ''
         qrCodeStyle.gradiantColorTwo = ''
-        vCardQrCode.update({
+        QrCode.update({
             image:`./assets/images/qr-logo/${qrCodeStyle.qrImage}`,
             imageOptions: {
                 margin: 5,
-                hideBackgroundDots: false,
+                hideBackgroundDots: true,
+                imageSize: .4,
             },
             dotsOptions: {
                 gradient: {
@@ -113,13 +90,13 @@ export const qrGen = () => {
             },
         })
 
-        console.log(vCardQrCode);
     } else {
-        vCardQrCode.update({
+        QrCode.update({
             image:`./assets/images/qr-logo/${qrCodeStyle.qrImage}`,
             imageOptions: {
                 margin: 5,
-                hideBackgroundDots: false,
+                hideBackgroundDots: true,
+                imageSize: .4,
             },
             dotsOptions: {      
                 gradient: {

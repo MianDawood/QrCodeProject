@@ -3664,14 +3664,8 @@ span.close {
   justify-content: center;
 }
 
-.qr-generator .url .card form .label {
-  width: 20%;
-}
 
-.qr-generator .url .card form .input {
-  width: 80%;
-  font-family: Gregular;
-}
+
 
 .qr-generator .label {
   font-family: Gregular;

@@ -23,14 +23,14 @@
         Website
       </p>
     </div>
-    <div @click="show('event')" :class="tabs.event.class" class="tab tab-4">
+    <!-- <div @click="show('event')" :class="tabs.event.class" class="tab tab-4">
       <span>
         <img src="assets/images/tabs-icons/event.svg" alt="">
       </span>
       <p>
         Event
       </p>
-    </div>
+    </div> -->
     <div @click="show('pdf')" :class="tabs.pdf.class" class="tab tab-5">
       <span>
         <img src="assets/images/tabs-icons/pdf.svg" alt="">
@@ -39,14 +39,14 @@
         PDF
       </p>
     </div>
-    <div @click="show('bitcoin')" :class="tabs.bitcoin.class" class="tab tab-6">
+    <!-- <div @click="show('bitcoin')" :class="tabs.bitcoin.class" class="tab tab-6">
       <span>
         <img src="assets/images/tabs-icons/bitcoin.svg" alt="">
       </span>
       <p>
         Bitcion
       </p>
-    </div>
+    </div> -->
     <div @click="show('rating')" :class="tabs.rating.class" class="tab tab-7">
       <span>
         <img src="assets/images/tabs-icons/rating.svg" alt="">
@@ -55,14 +55,14 @@
         Rating
       </p>
     </div>
-    <div @click="show('socialmedia')" :class="tabs.socialmedia.class" class="tab tab-8">
+    <!-- <div @click="show('socialmedia')" :class="tabs.socialmedia.class" class="tab tab-8">
       <span>
         <img src="assets/images/tabs-icons/sm.svg" alt="">
       </span>
       <p>
         Social Media
       </p>
-    </div>
+    </div> -->
     <div @click="show('googlereview')" :class="tabs.googlereview.class" class="tab tab-9">
       <span>
         <img src="assets/images/tabs-icons/google-review.svg" alt="">
@@ -71,12 +71,12 @@
         Google Review
       </p>
     </div>
-    <div @click="show('more')" :class="tabs.more.class" class="tab tab-10">
+    <!-- <div @click="show('more')" :class="tabs.more.class" class="tab tab-10">
       <span>
         <img src="assets/images/tabs-icons/more.svg" alt="">
       </span>
       <p>
         More
       </p>
-    </div>
+    </div> -->
   </section>

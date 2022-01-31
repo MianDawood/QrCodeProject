@@ -7,7 +7,7 @@ import { qrCodeStyle } from './vue-files/objects';
 // Simple example, see optional options for more configuration.
 
 
-const colorPicker = () => {
+export const colorPicker = () => {
     const component = {
         // Main components
         preview: true,
@@ -143,16 +143,27 @@ const colorPicker = () => {
         document.querySelector(`.${element}-label`).value = pickedColor
         qrCodeStyle[element] = pickedColor
         document.querySelector(`.${element}-label`).innerHTML = pickedColor
+
+        //Generate Qr Code with New Color
         qrGen();
     }
     function elementCallbackInit(color, element) {
         let pickedColor = color.toHEXA().toString();
         document.querySelector(`.${element}-label`).value = pickedColor
         document.querySelector(`.${element}-label`).innerHTML = pickedColor
+
+
+        //Generate Qr Code with New Color
         qrGen();
     }
 
 }
+
+const tabs  = document.querySelectorAll('.tab')
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", colorPicker)
+})
 
 colorPicker();
 

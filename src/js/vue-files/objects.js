@@ -1,3 +1,7 @@
+export const qrData = {
+    data : 'www.qrcode.com',
+}
+
 export const vCardForm = {
     firstName:'',
     lastName:'',
@@ -13,6 +17,10 @@ export const vCardForm = {
     street:'',
     summery:'',
     canvas: '<h1>Hello world</h1>',
+}
+
+export const urlForm = {
+    url: 'www.qrcode.com',
 }
 
 export const qrCodeStyle = {
@@ -38,5 +46,5 @@ export const qrCodeStyle = {
     backgroundColor : '',
 
     //Qr Img 
-    qrImage: '1.png',
+    qrImage: 'logo.png',
 }
