@@ -317,8 +317,10 @@ include('./includes/conn.php');
     </div>
     <!-- //////////footer start//////////// -->
 
+    
 
-    <script src="https://unpkg.com/vue@next"></script>
+
+    
     <?php include("./includes/Head&Foot/footer.php") ?>
     <script>
     $(".footer_collapse").click(function() {
