@@ -162,6 +162,7 @@ export const colorPicker = () => {
 const tabs  = document.querySelectorAll('.tab')
 
 tabs.forEach(tab => {
+    window.addEventListener("load", colorPicker)
     tab.addEventListener("click", colorPicker)
 })
 

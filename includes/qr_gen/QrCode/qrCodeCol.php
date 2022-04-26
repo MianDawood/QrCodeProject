@@ -34,7 +34,7 @@
                   </div>
                 </div>
                 <div class="px-4 text-center py-2 my-3">
-                  <button type="button" class="btn btn-outline-dark py-3 px-4" style="border-radius: 20px;">Save QR
+                  <button @click="saveQrCode" type="button" class="btn btn-outline-dark py-3 px-4" style="border-radius: 20px;">Save QR
                     Code</button>
                 </div>
               </div>

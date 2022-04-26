@@ -40,6 +40,9 @@
                 </li>
                 <?php if($_SESSION['userId']){?>
                 <li>
+                    <a href="saved.php">Saved QrCode</a>
+                </li>
+                <li>
 
                     <a class="nav-link Register_btn text-light" href="./process/logout.php">Logout</a>
                 </li>

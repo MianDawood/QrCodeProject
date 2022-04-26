@@ -11,67 +11,37 @@ include('./includes/conn.php');
 
     <?php include("./includes/navbar/header.php") ?>
 
+    <div class="container qr-generator">
 
-    <div id="vueReactive">
-        <?php 
-            include("./includes/qr_gen/tabs.php");
-        ?>
-        <section class="qr-generator">
-            <div class="input-data p-0">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Link</th>
+                <th scope="col">Category</th>
+                <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                    require "./includes/conn.php";
 
-                <!-- VCard Section -->
-                <div v-if="tabs.vCard.value">
-                    <?php include("./includes/qr_gen/tab-items/vcard.php") ?>
-                </div>
-
-                <!-- URL Section -->
-                <div v-if="tabs.url.value">
-                    <?php include("./includes/qr_gen/tab-items/url.php") ?>
-                </div>
-
-                <!-- Website Section -->
-                <div v-if="tabs.website.value">
-                    <?php include("./includes/qr_gen/tab-items/website.php") ?>
-                </div>
-
-
-                <!-- Event Section -->
-                <div v-if="tabs.event.value">
-                    <?php include("./includes/qr_gen/tab-items/event.php") ?>
-                </div>
-
-                <!-- PDF Section -->
-                <div v-if="tabs.pdf.value">
-                    <?php include("./includes/qr_gen/tab-items/pdf.php") ?>
-                </div>
-
-                <!-- Bitcion Section -->
-                <div v-if="tabs.bitcoin.value">
-                    <?php include("./includes/qr_gen/tab-items/bitcoin.php") ?>
-                </div>
-
-                <!-- Rating Section -->
-                <div v-if="tabs.rating.value">
-                    <?php include("./includes/qr_gen/tab-items/rating.php") ?>
-                </div>
-
-                <!-- Social Media Section -->
-                <div v-if="tabs.socialmedia.value">
-                    <?php include("./includes/qr_gen/tab-items/social-media.php") ?>
-                </div>
-
-                <!-- Google Review Section -->
-                <div v-if="tabs.googlereview.value">
-                    <?php include("./includes/qr_gen/tab-items/google-review.php") ?>
-                </div>
-
-                <!-- More -->
-                <div v-if="tabs.more.value">
-                    <?php include("./includes/qr_gen/tab-items/more.php") ?>
-                </div>
-
-            </div>
-        </section>
+                    $id = $_SESSION["userId"];
+                    $qrQuery = "SELECT * FROM `qrCode_table` WHERE user_id = $id";
+                    $execute = mysqli_query($con, $qrQuery); 
+                ?>
+                <tr>
+                <?php 
+                    while($data = mysqli_fetch_array($execute)) {
+                ?>
+                <th scope="row"><?php echo $data["qr_id"] ?></th>
+                <td><?php echo $data["qr_content"] ?></td>
+                <td><?php echo $data["qr_category"] ?></td>
+                <td><a href="./qr-gen.php?qrId=<?php echo $data["qr_id"]?>" class="btn btn-primary">Edit</a></td>
+                <?php } ?>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 

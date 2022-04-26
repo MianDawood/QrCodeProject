@@ -39,7 +39,7 @@ export const qrCodeStyle = {
     // Eye Color
     singleEyeColor: '',
     gradiantEyeColorOne: '',
-    gradiantEyeColorOne: '',
+    gradiantEyeColorTwo: '',
     dotEyeColorGradiantType: 'linear',
 
     // Background

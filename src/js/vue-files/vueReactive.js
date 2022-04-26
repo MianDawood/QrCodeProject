@@ -7,6 +7,7 @@ import { vCardForm, urlForm ,qrCodeStyle} from "./objects";
 
 
 import Swal from "sweetalert2"
+import axios from "axios";
 
 
 const app = Vue.createApp({
@@ -93,7 +94,6 @@ const app = Vue.createApp({
         qrImg(data) {
             this.qrCodeState.qrImage = data;
             this.updateQrCode();
-            console.log(this.qrCodeState);
         },
 
 
@@ -108,6 +108,101 @@ const app = Vue.createApp({
                 })
             }
         },
+
+        saveQrCode () {
+            Object.keys(this.tabs).forEach(key => {
+                if(this.tabs[key].value == true && key == 'vCard') {
+                    vCardGenerator();
+                } else if (this.tabs[key].value == true && key == 'url') {
+                    this.urlPost("url")
+                } else if (this.tabs[key].value == true && key == 'website') {
+                    this.urlPost("website")
+                } else if (this.tabs[key].value == true && key == 'pdf') {
+                    urlGenerator();
+                } else if (this.tabs[key].value == true && key == 'googlereview') {
+                    urlGenerator();
+                } else if (this.tabs[key].value == true && key == 'rating') {
+                    urlGenerator();
+                }
+            })
+        },
+
+        async urlPost(cat) {
+            await axios.post(`./process/qrUpload.php`,{
+                data: this.urlState,
+                style: this.qrCodeState,
+                category: cat
+            }).then(res => {
+                if(res.data == "success") {
+                    Swal.fire({
+                        icon:"success",
+                        title: "Done",
+                        text:"Succesfully Inserted"
+                    })
+                }
+            })
+            
+        },
+
+
+        async fileUpload () {
+            let file = this.$refs.logoFile.files[0]
+            let formData = new FormData();
+            formData.append('file', file);
+
+            await axios.post('./process/fileUpload.php', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            }).then(res => {
+                if(res.data == "done") {
+                    Swal.fire({
+                        icon:"success",
+                        title: "Done",
+                        text:"File Uploaded"
+                    })
+                }
+            })
+        },
+
+
+        async editQr() {
+            let uri = window.location.href.split('=');
+            let id = uri[1];
+            if(id) {
+                await axios.post("./process/qrSelection.php", {
+                    id
+                }).then(res => {
+                    let {data} = res;
+                    console.log(data)
+                    this.show(`${data.qr_category}`)
+
+                    urlForm.url = data.qr_content
+
+                    qrCodeStyle.backgroundColor = data.qr_bgcolor
+
+                    qrCodeStyle.singleColor = data.qr_singleColor
+                    qrCodeStyle.singleEyeColor = data.qr_singleEyeColor
+
+                    qrCodeStyle.gradiantColorOne = data.qr_gradiantColorOne
+                    qrCodeStyle.gradiantColorTwo = data.qr_gradiantColorTwo
+
+                    qrCodeStyle.gradiantEyeColorOne = data.qr_gradiantEyeColorOne
+                    qrCodeStyle.gradiantEyeColorTwo = data.qr_gradiantEyeColorTwo
+
+                    qrCodeStyle.dotColorGradiantType = data.qr_dotColorGradiantType
+                    qrCodeStyle.dotEyeColorGradiantType = data.qr_dotEyeColorGradiantType
+
+                    qrCodeStyle.qrImage = data.qr_qrImage
+
+                    this.updateQrCode();
+                })
+            }
+        }
+
+
+
+
     },
 
     updated () {
@@ -120,6 +215,7 @@ const app = Vue.createApp({
     },
 
     created() {
+        this.editQr();
     }
 })
 
